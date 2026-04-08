@@ -20,6 +20,12 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+Или
+
+```bash
+.../switchpro/start.sh
+```
+
 
 Откройте браузер: http://localhost:5000
 
