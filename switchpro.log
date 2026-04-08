@@ -1,0 +1,1277 @@
+2026-03-24 06:23:29 [INFO] ============================================================
+2026-03-24 06:23:29 [INFO] SwitchPro запущен
+2026-03-24 06:44:52 [INFO   ] ============================================================
+2026-03-24 06:44:52 [INFO   ] SwitchPro запущен
+2026-03-24 06:57:21 [INFO   ] ============================================================
+2026-03-24 06:57:21 [INFO   ] SwitchPro запущен
+2026-03-24 07:07:54 [INFO   ] ============================================================
+2026-03-24 07:07:54 [INFO   ] SwitchPro запущен
+2026-03-24 11:12:25 [INFO   ] ============================================================
+2026-03-24 11:12:25 [INFO   ] SwitchPro v4 запущен
+2026-03-24 16:10:13 [INFO   ] ============================================================
+2026-03-24 16:10:13 [INFO   ] SwitchPro v5 запущен
+2026-03-26 09:50:36 [INFO   ] ============================================================
+2026-03-26 09:50:36 [INFO   ] SwitchPro v5 запущен
+2026-03-27 06:52:03 [INFO   ] ============================================================
+2026-03-27 06:52:03 [INFO   ] SwitchPro v5 запущен
+2026-03-27 12:30:40 [INFO   ] ============================================================
+2026-03-27 12:30:40 [INFO   ] SwitchPro v6 запущен
+2026-03-27 16:36:47 [INFO   ] ============================================================
+2026-03-27 16:36:47 [INFO   ] SwitchPro v6 запущен
+2026-03-28 06:44:03 [INFO   ] ============================================================
+2026-03-28 06:44:03 [INFO   ] SwitchPro v6 запущен
+2026-03-28 13:04:56 [INFO   ] ============================================================
+2026-03-28 13:04:56 [INFO   ] SwitchPro v6 запущен
+2026-03-31 08:03:43 [INFO   ] ============================================================
+2026-03-31 08:03:43 [INFO   ] SwitchPro v6 запущен
+2026-03-31 08:04:36 [INFO   ] ============================================================
+2026-03-31 08:04:36 [INFO   ] SwitchPro v6 запущен
+2026-04-01 06:20:06 [INFO   ] ============================================================
+2026-04-01 06:20:06 [INFO   ] SwitchPro v6 запущен
+2026-04-01 09:23:39 [INFO   ] ============================================================
+2026-04-01 09:23:39 [INFO   ] SwitchPro v6 запущен
+2026-04-01 09:23:39 [INFO   ] ============================================================
+2026-04-01 09:23:39 [INFO   ] SwitchPro v6 запущен
+2026-04-01 09:24:01 [INFO   ] === CONNECT host=172.16.2.201 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 09:24:01 [INFO   ] Определение модели [172.16.2.201] proto=ssh
+2026-04-01 09:24:01 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 09:24:01 [DEBUG  ] starting thread (client mode): 0x2f2c6900
+2026-04-01 09:24:01 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 09:24:01 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.9p1.RL
+2026-04-01 09:24:01 [INFO   ] Connected (version 2.0, client OpenSSH_5.9p1.RL)
+2026-04-01 09:24:01 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 09:24:01 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-01 09:24:01 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-01 09:24:01 [DEBUG  ] client encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-01 09:24:01 [DEBUG  ] server encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-01 09:24:01 [DEBUG  ] client mac: hmac-sha1
+2026-04-01 09:24:01 [DEBUG  ] server mac: hmac-sha1
+2026-04-01 09:24:01 [DEBUG  ] client compress: none
+2026-04-01 09:24:01 [DEBUG  ] server compress: none
+2026-04-01 09:24:01 [DEBUG  ] client lang: <none>
+2026-04-01 09:24:01 [DEBUG  ] server lang: <none>
+2026-04-01 09:24:01 [DEBUG  ] kex follows: False
+2026-04-01 09:24:01 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 09:24:01 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-01 09:24:01 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 09:24:01 [DEBUG  ] Cipher: aes128-ctr
+2026-04-01 09:24:01 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 09:24:01 [DEBUG  ] Compression: none
+2026-04-01 09:24:01 [DEBUG  ] === End of kex handshake ===
+2026-04-01 09:24:01 [DEBUG  ] Got server p (2048 bits)
+2026-04-01 09:24:03 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-01 09:24:03 [DEBUG  ] Switch to new keys ...
+2026-04-01 09:24:03 [DEBUG  ] userauth is OK
+2026-04-01 09:24:03 [INFO   ] Authentication (password) successful!
+2026-04-01 09:24:03 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 09:24:03 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-01 09:24:03 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 09:24:03 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 09:24:03 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 09:24:04 [DEBUG  ] Banner [172.16.2.201]: '\n\n\nPassword: ss Verification\n\nUsername: \nPassword: ss Verification\n\nUsername: \n\na02-sw201>'
+2026-04-01 09:24:04 [INFO   ] Shell [172.16.2.201], промпт: 'a02-sw201'
+2026-04-01 09:24:05 [DEBUG  ] run [172.16.2.201]: show version
+2026-04-01 09:24:05 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw201#terminal datadump
+SW version    1.4.11.5 ( date  08-Apr-2020 time  13:49:34 )
+Boot version    1.3.5.06 ( date  21-Jul-2013 time  15:12:10 )
+HW versio
+2026-04-01 09:24:05 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw201#terminal datadump
+SW version    1.4.11.5 ( date  08-Apr-2020 time  13:49:34 )
+Boot version    1.3.5.06 ( date  21-Jul-2013 time  15:12:10 )
+HW version    V02
+2026-04-01 09:24:05 [DEBUG  ] run [172.16.2.201]: show system
+2026-04-01 09:24:05 [DEBUG  ] [show system]: System Description:                       SF300-48 48-Port 10/100 Managed Switch
+System Up Time (days,hour:min:sec):       55,10:34:57
+System Contact:                           
+System Name:          
+2026-04-01 09:24:05 [DEBUG  ] [show system]: System Description:                       SF300-48 48-Port 10/100 Managed Switch
+System Up Time (days,hour:min:sec):       55,10:34:57
+System Contact:                           
+System Name:                              a02-sw201
+System Location:    
+2026-04-01 09:24:05 [INFO   ] Модель по паттерну 'SF300-48': cisco_sf300
+2026-04-01 09:24:05 [INFO   ] Подключено: 172.16.2.201 → cisco_sf300 (Cisco SF300)
+2026-04-01 09:24:07 [INFO   ] RUN [172.16.2.201] action=show_all_ports port=fa1 cmd='sh int st'
+2026-04-01 09:24:07 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-01 09:24:07 [DEBUG  ] run [172.16.2.201]: sh int st
+2026-04-01 09:24:08 [DEBUG  ] [sh int st]: Flow Link          Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State       Pressure Mode
+-------- ------------ ------  ----- -------- ---- ----------- -------- -------
+fa1      100M-
+2026-04-01 09:24:12 [INFO   ] RUN [172.16.2.201] action=mac_table port=fa1 cmd='sh mac add int fa1'
+2026-04-01 09:24:12 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-01 09:24:12 [DEBUG  ] run [172.16.2.201]: sh mac add int fa1
+2026-04-01 09:24:16 [DEBUG  ] [sh mac add int fa1]: Flags: I - Internal usage VLAN
+Aging time is 300 sec
+    Vlan          Mac Address         Port       Type    
+------------ --------------------- ---------- ----------
+2026-04-01 09:24:18 [INFO   ] RUN [172.16.2.201] action=cable_test port=fa1 cmd='test cable-diagnostics tdr int fa1'
+2026-04-01 09:24:18 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-01 09:24:18 [DEBUG  ] run [172.16.2.201]: test cable-diagnostics tdr int fa1
+2026-04-01 09:24:24 [DEBUG  ] [test cable-diagnostics tdr int fa1]: ..
+Cable on port fa1 is open at 54 m
+2026-04-01 09:24:27 [INFO   ] RUN [172.16.2.201] action=port_errors port=fa1 cmd='sh int cou fa1'
+2026-04-01 09:24:27 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-01 09:24:27 [DEBUG  ] run [172.16.2.201]: sh int cou fa1
+2026-04-01 09:24:28 [DEBUG  ] [sh int cou fa1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+      fa1             0            0            0            0    
+2026-04-01 09:24:30 [INFO   ] RUN [172.16.2.201] action=dhcp_bindings port=fa1 cmd='sh ip dhcp snooping binding'
+2026-04-01 09:24:30 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-01 09:24:30 [DEBUG  ] run [172.16.2.201]: sh ip dhcp snooping binding
+2026-04-01 09:24:31 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 14
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+00:16:36:9b:5c:05  1
+2026-04-01 09:24:32 [INFO   ] DISCONNECT [172.16.2.201] proto=ssh
+2026-04-01 09:24:32 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 09:24:32 [DEBUG  ] EOF in transport thread
+2026-04-01 09:24:39 [INFO   ] === CONNECT host=172.16.2.156 user=andr proto=telnet src=91.205.167.6 enable=True
+2026-04-01 09:24:39 [INFO   ] Определение модели [172.16.2.156] proto=telnet
+2026-04-01 09:24:40 [DEBUG  ] Probe banner [172.16.2.156]: '\r\x1b[100B\r\n\r\t\tEltex Switch \r\n\r\na02-sw156 login: '
+2026-04-01 09:24:40 [DEBUG  ] TelnetSession banner [172.16.2.156]: '\r\x1b[100B\r\n\r\t\tEltex Switch \r\n\r\na02-sw156 login: '
+2026-04-01 09:24:40 [DEBUG  ] TelnetSession: логин [172.16.2.156]
+2026-04-01 09:24:40 [DEBUG  ] TelnetSession after-login [172.16.2.156]: 'andr\r\n\rPassword: '
+2026-04-01 09:24:40 [DEBUG  ] TelnetSession: пароль [172.16.2.156]
+2026-04-01 09:24:42 [DEBUG  ] TelnetSession after-pass [172.16.2.156]: 'cceeded\r\n\r\x1b[100B\r\n \r\n\r\n<134> 1-Apr-2026 09:24:40.650 CLI-6-User andr logged in via telnet from 91.205.167.9\r\n\ra02-sw156#'
+2026-04-01 09:24:42 [INFO   ] TelnetSession: вошли [172.16.2.156], промпт='a02-sw156', linksys=False
+2026-04-01 09:24:42 [DEBUG  ] TelnetSession.run [172.16.2.156]: show version
+2026-04-01 09:24:42 [INFO   ] TelnetSession result [172.16.2.156]: 40 байт
+2026-04-01 09:24:42 [DEBUG  ] [show version] telnet: ^
+% Invalid input detected at '^' marker
+2026-04-01 09:24:42 [DEBUG  ] TelnetSession.run [172.16.2.156]: show system
+2026-04-01 09:24:43 [INFO   ] TelnetSession result [172.16.2.156]: 21 байт
+2026-04-01 09:24:43 [DEBUG  ] [show system] telnet: % Incomplete command.
+2026-04-01 09:24:43 [DEBUG  ] TelnetSession.run [172.16.2.156]: show system information
+2026-04-01 09:24:43 [INFO   ] TelnetSession result [172.16.2.156]: 825 байт
+2026-04-01 09:24:43 [DEBUG  ] [show system information] telnet: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address    
+2026-04-01 09:24:43 [INFO   ] Модель по серийнику ESF: mes2424b_ac
+2026-04-01 09:24:43 [INFO   ] Подключено: 172.16.2.156 → mes2424b_ac (Eltex MES2424B AC)
+2026-04-01 09:24:45 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/1 cmd='show interfaces sta'
+2026-04-01 09:24:45 [DEBUG  ] Reusing cached session [172.16.2.156] proto=telnet
+2026-04-01 09:24:45 [DEBUG  ] TelnetSession.run [172.16.2.156]: show interfaces sta
+2026-04-01 09:24:45 [INFO   ] TelnetSession result [172.16.2.156]: 3591 байт
+2026-04-01 09:24:50 [INFO   ] RUN [172.16.2.156] action=mac_table port=gi0/1 cmd='sh mac int gi0/1'
+2026-04-01 09:24:50 [DEBUG  ] Reusing cached session [172.16.2.156] proto=telnet
+2026-04-01 09:24:50 [DEBUG  ] TelnetSession.run [172.16.2.156]: sh mac int gi0/1
+2026-04-01 09:24:50 [INFO   ] TelnetSession result [172.16.2.156]: 158 байт
+2026-04-01 09:24:52 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/1 cmd='show int cou gi0/1'
+2026-04-01 09:24:52 [DEBUG  ] Reusing cached session [172.16.2.156] proto=telnet
+2026-04-01 09:24:52 [DEBUG  ] TelnetSession.run [172.16.2.156]: show int cou gi0/1
+2026-04-01 09:24:52 [INFO   ] TelnetSession result [172.16.2.156]: 527 байт
+2026-04-01 09:24:54 [INFO   ] RUN [172.16.2.156] action=dhcp_bindings port=gi0/1 cmd='show ip binding'
+2026-04-01 09:24:54 [DEBUG  ] Reusing cached session [172.16.2.156] proto=telnet
+2026-04-01 09:24:54 [DEBUG  ] TelnetSession.run [172.16.2.156]: show ip binding
+2026-04-01 09:24:55 [INFO   ] TelnetSession result [172.16.2.156]: 1040 байт
+2026-04-01 09:25:36 [INFO   ] DISCONNECT [172.16.2.156] proto=telnet
+2026-04-01 09:25:41 [INFO   ] === CONNECT host=172.16.2.64 user=andr proto=telnet src=91.205.167.6 enable=True
+2026-04-01 09:25:41 [INFO   ] Определение модели [172.16.2.64] proto=telnet
+2026-04-01 09:25:41 [DEBUG  ] Probe banner [172.16.2.64]: '\r\x1b[100B\r\n\r\t\tEltex Switch \r\n\r\na02-sw64 login: '
+2026-04-01 09:25:41 [DEBUG  ] TelnetSession banner [172.16.2.64]: '\r\x1b[100B\r\n\r\t\tEltex Switch \r\n\r\na02-sw64 login: '
+2026-04-01 09:25:41 [DEBUG  ] TelnetSession: логин [172.16.2.64]
+2026-04-01 09:25:42 [DEBUG  ] TelnetSession after-login [172.16.2.64]: 'andr\r\n\rPassword: '
+2026-04-01 09:25:42 [DEBUG  ] TelnetSession: пароль [172.16.2.64]
+2026-04-01 09:25:43 [DEBUG  ] TelnetSession after-pass [172.16.2.64]: 'ucceeded\r\n\r\x1b[100B\r\n \r\n\r\n<134> 1-Apr-2026 09:25:42.100 CLI-6-User andr logged in via telnet from 91.205.167.9\r\n\ra02-sw64#'
+2026-04-01 09:25:43 [INFO   ] TelnetSession: вошли [172.16.2.64], промпт='a02-sw64', linksys=False
+2026-04-01 09:25:44 [DEBUG  ] TelnetSession.run [172.16.2.64]: show version
+2026-04-01 09:25:44 [INFO   ] TelnetSession result [172.16.2.64]: 40 байт
+2026-04-01 09:25:44 [DEBUG  ] [show version] telnet: ^
+% Invalid input detected at '^' marker
+2026-04-01 09:25:44 [DEBUG  ] TelnetSession.run [172.16.2.64]: show system
+2026-04-01 09:25:44 [INFO   ] TelnetSession result [172.16.2.64]: 21 байт
+2026-04-01 09:25:44 [DEBUG  ] [show system] telnet: % Incomplete command.
+2026-04-01 09:25:44 [DEBUG  ] TelnetSession.run [172.16.2.64]: show system information
+2026-04-01 09:25:44 [INFO   ] TelnetSession result [172.16.2.64]: 826 байт
+2026-04-01 09:25:44 [DEBUG  ] [show system information] telnet: Hardware Version                  : 5v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3010580
+Switch Base MAC Address    
+2026-04-01 09:25:44 [INFO   ] Модель по серийнику ESF: mes2424b_ac
+2026-04-01 09:25:44 [INFO   ] Подключено: 172.16.2.64 → mes2424b_ac (Eltex MES2424B AC)
+2026-04-01 09:25:47 [INFO   ] DISCONNECT [172.16.2.64] proto=telnet
+2026-04-01 09:25:59 [INFO   ] === CONNECT host=172.16.1.34 user=andr proto=telnet src=91.205.167.6 enable=True
+2026-04-01 09:25:59 [INFO   ] Определение модели [172.16.1.34] proto=telnet
+2026-04-01 09:25:59 [DEBUG  ] Probe banner [172.16.1.34]: '\r\n\r\r\nUser Name:'
+2026-04-01 09:25:59 [INFO   ] Модель по telnet баннеру 'User Name:': linksys
+2026-04-01 09:25:59 [INFO   ] Подключено: 172.16.1.34 → linksys (Linksys)
+2026-04-01 09:26:01 [INFO   ] RUN [172.16.1.34] action=show_all_ports port=e1 cmd='sh int st'
+2026-04-01 09:26:01 [DEBUG  ] Opening new session [172.16.1.34] proto=telnet
+2026-04-01 09:26:01 [DEBUG  ] TelnetSession banner [172.16.1.34]: '\r\n\r\r\nUser Name:'
+2026-04-01 09:26:01 [INFO   ] TelnetSession: Linksys обнаружен по 'User Name:' [172.16.1.34]
+2026-04-01 09:26:01 [DEBUG  ] TelnetSession: логин [172.16.1.34]
+2026-04-01 09:26:02 [DEBUG  ] TelnetSession after-login [172.16.1.34]: 'andr\r\n\rPassword:'
+2026-04-01 09:26:02 [DEBUG  ] TelnetSession: пароль [172.16.1.34]
+2026-04-01 09:26:03 [DEBUG  ] TelnetSession after-pass [172.16.1.34]: '09:26:00 %AAA-W-REJECT: New telnet connection for user unKnown, source 91.205.167.9 destination 172.16.1.34  REJECTED\r\r\n'
+2026-04-01 09:26:03 [INFO   ] TelnetSession: вошли [172.16.1.34], промпт='', linksys=True
+2026-04-01 09:26:03 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh int st
+2026-04-01 09:26:04 [INFO   ] TelnetSession result [172.16.1.34]: 1682 байт
+2026-04-01 09:26:07 [INFO   ] RUN [172.16.1.34] action=mac_table port=e1 cmd='sh mac add eth e1'
+2026-04-01 09:26:07 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:07 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh mac add eth e1
+2026-04-01 09:26:08 [INFO   ] TelnetSession result [172.16.1.34]: 1402 байт
+2026-04-01 09:26:16 [INFO   ] RUN [172.16.1.34] action=mac_table port=e1 cmd='sh mac add eth e1'
+2026-04-01 09:26:16 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:16 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh mac add eth e1
+2026-04-01 09:26:19 [INFO   ] TelnetSession result [172.16.1.34]: 168 байт
+2026-04-01 09:26:21 [INFO   ] RUN [172.16.1.34] action=port_errors port=e1 cmd='sh int cou eth e1'
+2026-04-01 09:26:21 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:21 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh int cou eth e1
+2026-04-01 09:26:22 [INFO   ] TelnetSession result [172.16.1.34]: 572 байт
+2026-04-01 09:26:25 [INFO   ] RUN [172.16.1.34] action=port_errors port=e1 cmd='sh int cou eth e1'
+2026-04-01 09:26:25 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:25 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh int cou eth e1
+2026-04-01 09:26:25 [INFO   ] TelnetSession result [172.16.1.34]: 572 байт
+2026-04-01 09:26:31 [INFO   ] RUN [172.16.1.34] action=clear_errors port=e1 cmd='clear cou eth e1'
+2026-04-01 09:26:31 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:31 [DEBUG  ] TelnetSession.run [172.16.1.34]: clear cou eth e1
+2026-04-01 09:26:31 [INFO   ] TelnetSession result [172.16.1.34]: 0 байт
+2026-04-01 09:26:33 [INFO   ] RUN [172.16.1.34] action=port_errors port=e1 cmd='sh int cou eth e1'
+2026-04-01 09:26:33 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:33 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh int cou eth e1
+2026-04-01 09:26:34 [INFO   ] TelnetSession result [172.16.1.34]: 572 байт
+2026-04-01 09:26:35 [INFO   ] RUN [172.16.1.34] action=dhcp_bindings port=e1 cmd='sh ip dhcp snooping binding'
+2026-04-01 09:26:35 [DEBUG  ] Reusing cached session [172.16.1.34] proto=telnet
+2026-04-01 09:26:35 [DEBUG  ] TelnetSession.run [172.16.1.34]: sh ip dhcp snooping binding
+2026-04-01 09:26:36 [INFO   ] TelnetSession result [172.16.1.34]: 321 байт
+2026-04-01 09:26:37 [INFO   ] DISCONNECT [172.16.1.34] proto=telnet
+2026-04-01 10:03:59 [INFO   ] ============================================================
+2026-04-01 10:03:59 [INFO   ] SwitchPro v6 запущен
+2026-04-01 12:55:18 [INFO   ] ============================================================
+2026-04-01 12:55:18 [INFO   ] SwitchPro v6 запущен
+2026-04-01 12:55:18 [INFO   ] ============================================================
+2026-04-01 12:55:18 [INFO   ] SwitchPro v6 запущен
+2026-04-01 12:55:41 [INFO   ] === CONNECT host=172.16.1.184 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 12:55:41 [INFO   ] Определение модели [172.16.1.184] proto=ssh
+2026-04-01 12:55:41 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 12:55:41 [DEBUG  ] starting thread (client mode): 0xad1427b0
+2026-04-01 12:55:41 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 12:55:41 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_3.4p1.RL
+2026-04-01 12:55:41 [INFO   ] Connected (version 2.0, client OpenSSH_3.4p1.RL)
+2026-04-01 12:55:41 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 12:55:41 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-01 12:55:41 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-01 12:55:41 [DEBUG  ] client encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 12:55:41 [DEBUG  ] server encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 12:55:41 [DEBUG  ] client mac: hmac-sha1, hmac-md5
+2026-04-01 12:55:41 [DEBUG  ] server mac: hmac-sha1, hmac-md5
+2026-04-01 12:55:41 [DEBUG  ] client compress: none
+2026-04-01 12:55:41 [DEBUG  ] server compress: none
+2026-04-01 12:55:41 [DEBUG  ] client lang: <none>
+2026-04-01 12:55:41 [DEBUG  ] server lang: <none>
+2026-04-01 12:55:41 [DEBUG  ] kex follows: False
+2026-04-01 12:55:41 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 12:55:41 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-01 12:55:41 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 12:55:41 [DEBUG  ] Cipher: aes128-cbc
+2026-04-01 12:55:41 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 12:55:41 [DEBUG  ] Compression: none
+2026-04-01 12:55:41 [DEBUG  ] === End of kex handshake ===
+2026-04-01 12:55:42 [DEBUG  ] Got server p (2049 bits)
+2026-04-01 12:55:43 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-01 12:55:43 [DEBUG  ] Switch to new keys ...
+2026-04-01 12:55:44 [DEBUG  ] userauth is OK
+2026-04-01 12:55:44 [INFO   ] Authentication (password) successful!
+2026-04-01 12:55:44 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 12:55:44 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-01 12:55:44 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 12:55:44 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:55:44 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:55:44 [DEBUG  ] Banner [172.16.1.184]: '\n\n\n\na01-sw184#'
+2026-04-01 12:55:44 [INFO   ] Shell [172.16.1.184], промпт: 'a01-sw184'
+2026-04-01 12:55:45 [DEBUG  ] run [172.16.1.184]: show version
+2026-04-01 12:55:45 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a01-sw184#terminal datadump
+SW version    1.1.48.5[aa39f5d3] ( date  29-Nov-2018 time  10:54:33 )
+Boot version    0.0.1.7 ( date  18-May-2018 time  16:00:07 )
+
+2026-04-01 12:55:45 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a01-sw184#terminal datadump
+SW version    1.1.48.5[aa39f5d3] ( date  29-Nov-2018 time  10:54:33 )
+Boot version    0.0.1.7 ( date  18-May-2018 time  16:00:07 )
+HW version    01.04
+2026-04-01 12:55:45 [DEBUG  ] run [172.16.1.184]: show system
+2026-04-01 12:55:46 [DEBUG  ] [show system]: System Description:                       MES1124MB AC rev.B 28-port 100M/1G Managed Switch
+System Up Time (days,hour:min:sec):       48,06:19:05
+System Contact:                           
+System Name
+2026-04-01 12:55:46 [DEBUG  ] [show system]: System Description:                       MES1124MB AC rev.B 28-port 100M/1G Managed Switch
+System Up Time (days,hour:min:sec):       48,06:19:05
+System Contact:                           
+System Name:                              a01-sw184
+System Lo
+2026-04-01 12:55:46 [INFO   ] Модель по prompt 'mes1124mb': mes1124mb
+2026-04-01 12:55:46 [INFO   ] Подключено: 172.16.1.184 → mes1124mb (Eltex MES1124MB)
+2026-04-01 12:55:49 [INFO   ] RUN [172.16.1.184] action=show_all_ports port=fa1 cmd='sh int st'
+2026-04-01 12:55:49 [DEBUG  ] Reusing cached session [172.16.1.184] proto=ssh
+2026-04-01 12:55:49 [DEBUG  ] run [172.16.1.184]: sh int st
+2026-04-01 12:55:52 [DEBUG  ] [sh int st]: Flow Link           Up Time      Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode
+-------- ------------ ------  ----- -------- ---- --
+2026-04-01 12:56:02 [INFO   ] RUN [172.16.1.184] action=mac_table port=fa1/0/1 cmd='sh mac add int fa1/0/1'
+2026-04-01 12:56:02 [DEBUG  ] Reusing cached session [172.16.1.184] proto=ssh
+2026-04-01 12:56:02 [DEBUG  ] run [172.16.1.184]: sh mac add int fa1/0/1
+2026-04-01 12:56:05 [DEBUG  ] [sh mac add int fa1/0/1]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ----------
+2026-04-01 12:56:09 [INFO   ] RUN [172.16.1.184] action=mac_table port=gi1/0/1 cmd='sh mac add int gi1/0/1'
+2026-04-01 12:56:09 [DEBUG  ] Reusing cached session [172.16.1.184] proto=ssh
+2026-04-01 12:56:09 [DEBUG  ] run [172.16.1.184]: sh mac add int gi1/0/1
+2026-04-01 12:56:12 [DEBUG  ] [sh mac add int gi1/0/1]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ---------- 
+  2841     18:fd:74:c0:c1:b7    gi1/0/1    dynamic
+2026-04-01 12:56:14 [INFO   ] RUN [172.16.1.184] action=port_errors port=gi1/0/1 cmd='sh int cou gi1/0/1'
+2026-04-01 12:56:14 [DEBUG  ] Reusing cached session [172.16.1.184] proto=ssh
+2026-04-01 12:56:14 [DEBUG  ] run [172.16.1.184]: sh int cou gi1/0/1
+2026-04-01 12:56:14 [DEBUG  ] [sh int cou gi1/0/1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    gi1/0/1       761511818        0           392      1789299429
+2026-04-01 12:56:18 [INFO   ] RUN [172.16.1.184] action=dhcp_bindings port=gi1/0/1 cmd='sh ip dhcp snooping binding'
+2026-04-01 12:56:18 [DEBUG  ] Reusing cached session [172.16.1.184] proto=ssh
+2026-04-01 12:56:18 [DEBUG  ] run [172.16.1.184]: sh ip dhcp snooping binding
+2026-04-01 12:56:19 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 12
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+18:fd:74:c0:c1:b7  1
+2026-04-01 12:56:21 [INFO   ] DISCONNECT [172.16.1.184] proto=ssh
+2026-04-01 12:56:21 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 12:56:21 [DEBUG  ] EOF in transport thread
+2026-04-01 12:57:35 [INFO   ] === CONNECT host=172.16.1.104 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 12:57:35 [INFO   ] Определение модели [172.16.1.104] proto=ssh
+2026-04-01 12:57:35 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 12:57:35 [DEBUG  ] starting thread (client mode): 0xad166ad0
+2026-04-01 12:57:35 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 12:57:35 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.9p1.RL
+2026-04-01 12:57:35 [INFO   ] Connected (version 2.0, client OpenSSH_5.9p1.RL)
+2026-04-01 12:57:35 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 12:57:35 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-01 12:57:35 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-01 12:57:35 [DEBUG  ] client encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc, aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-01 12:57:35 [DEBUG  ] server encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc, aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-01 12:57:35 [DEBUG  ] client mac: hmac-sha1, hmac-md5
+2026-04-01 12:57:35 [DEBUG  ] server mac: hmac-sha1, hmac-md5
+2026-04-01 12:57:35 [DEBUG  ] client compress: none
+2026-04-01 12:57:35 [DEBUG  ] server compress: none
+2026-04-01 12:57:35 [DEBUG  ] client lang: <none>
+2026-04-01 12:57:35 [DEBUG  ] server lang: <none>
+2026-04-01 12:57:35 [DEBUG  ] kex follows: False
+2026-04-01 12:57:35 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 12:57:35 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-01 12:57:35 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 12:57:35 [DEBUG  ] Cipher: aes128-ctr
+2026-04-01 12:57:35 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 12:57:35 [DEBUG  ] Compression: none
+2026-04-01 12:57:35 [DEBUG  ] === End of kex handshake ===
+2026-04-01 12:57:36 [DEBUG  ] Got server p (2048 bits)
+2026-04-01 12:57:36 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-01 12:57:36 [DEBUG  ] Switch to new keys ...
+2026-04-01 12:57:36 [DEBUG  ] userauth is OK
+2026-04-01 12:57:36 [INFO   ] Authentication (password) successful!
+2026-04-01 12:57:36 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 12:57:36 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-01 12:57:36 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 12:57:36 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:57:36 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:57:37 [DEBUG  ] Banner [172.16.1.104]: '\n\n\nPassword: ss Verification\n\nUsername: \nPassword: ss Verification\n\nUsername: \n\na01-sw104>'
+2026-04-01 12:57:37 [INFO   ] Shell [172.16.1.104], промпт: 'a01-sw104'
+2026-04-01 12:57:37 [DEBUG  ] run [172.16.1.104]: show version
+2026-04-01 12:57:38 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a01-sw104#terminal datadump
+Active-image: flash://system/images/_image1.bin
+  Version: 4.0.15.2
+  Commit: c8793a92
+  Build: 1 (master)
+  MD5 Digest: b53ac9cfce
+2026-04-01 12:57:38 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a01-sw104#terminal datadump
+Active-image: flash://system/images/_image1.bin
+  Version: 4.0.15.2
+  Commit: c8793a92
+  Build: 1 (master)
+  MD5 Digest: b53ac9cfce8ee70c46848f7cc7d531f8
+  Date: 20-Jan-2021
+  Time:
+2026-04-01 12:57:38 [DEBUG  ] run [172.16.1.104]: show system
+2026-04-01 12:57:38 [DEBUG  ] [show system]: System Description:                       MES2324B 28-port 1G/10G Managed Switch
+System Up Time (days,hour:min:sec):       47,11:41:16
+System Contact:                           
+System Name:          
+2026-04-01 12:57:38 [DEBUG  ] [show system]: System Description:                       MES2324B 28-port 1G/10G Managed Switch
+System Up Time (days,hour:min:sec):       47,11:41:16
+System Contact:                           
+System Name:                              a01-sw104
+System Location:    
+2026-04-01 12:57:38 [INFO   ] Модель по prompt 'mes2324b': mes2324b
+2026-04-01 12:57:38 [INFO   ] Подключено: 172.16.1.104 → mes2324b (Eltex MES2324B)
+2026-04-01 12:57:43 [INFO   ] RUN [172.16.1.104] action=show_all_ports port=gi1/0/1 cmd='sh int st'
+2026-04-01 12:57:43 [DEBUG  ] Reusing cached session [172.16.1.104] proto=ssh
+2026-04-01 12:57:43 [DEBUG  ] run [172.16.1.104]: sh int st
+2026-04-01 12:57:45 [DEBUG  ] [sh int st]: Flow Link           Uptime       Back   Mdix                            
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
+-------- 
+2026-04-01 12:57:51 [INFO   ] RUN [172.16.1.104] action=mac_table port=gi1/0/1 cmd='sh mac add int gi1/0/1'
+2026-04-01 12:57:51 [DEBUG  ] Reusing cached session [172.16.1.104] proto=ssh
+2026-04-01 12:57:51 [DEBUG  ] run [172.16.1.104]: sh mac add int gi1/0/1
+2026-04-01 12:57:52 [DEBUG  ] [sh mac add int gi1/0/1]: Flags: I - Internal usage VLAN
+Aging time is 300 sec
+    Vlan          Mac Address         Port       Type    
+------------ --------------------- ---------- ----------
+2026-04-01 12:57:54 [INFO   ] RUN [172.16.1.104] action=cable_test port=gi1/0/1 cmd='test cable-diagnostics tdr int gi1/0/1'
+2026-04-01 12:57:54 [DEBUG  ] Reusing cached session [172.16.1.104] proto=ssh
+2026-04-01 12:57:54 [DEBUG  ] run [172.16.1.104]: test cable-diagnostics tdr int gi1/0/1
+2026-04-01 12:57:57 [DEBUG  ] [test cable-diagnostics tdr int gi1/0/1]: ......................
+ Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+gi1/0/1   1-2         Open             0      01-Apr-
+2026-04-01 12:57:59 [INFO   ] RUN [172.16.1.104] action=port_errors port=gi1/0/1 cmd='sh int cou gi1/0/1'
+2026-04-01 12:57:59 [DEBUG  ] Reusing cached session [172.16.1.104] proto=ssh
+2026-04-01 12:57:59 [DEBUG  ] run [172.16.1.104]: sh int cou gi1/0/1
+2026-04-01 12:58:00 [DEBUG  ] [sh int cou gi1/0/1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    gi1/0/1           0            0            0            0    
+2026-04-01 12:58:02 [INFO   ] RUN [172.16.1.104] action=dhcp_bindings port=gi1/0/1 cmd='sh ip dhcp snooping binding'
+2026-04-01 12:58:02 [DEBUG  ] Reusing cached session [172.16.1.104] proto=ssh
+2026-04-01 12:58:02 [DEBUG  ] run [172.16.1.104]: sh ip dhcp snooping binding
+2026-04-01 12:58:02 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 6
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+14:cc:20:7a:02:a5  10
+2026-04-01 12:58:03 [INFO   ] DISCONNECT [172.16.1.104] proto=ssh
+2026-04-01 12:58:03 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 12:58:03 [DEBUG  ] EOF in transport thread
+2026-04-01 12:58:54 [INFO   ] === CONNECT host=172.16.3.196 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 12:58:54 [INFO   ] Определение модели [172.16.3.196] proto=ssh
+2026-04-01 12:58:54 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 12:58:54 [DEBUG  ] starting thread (client mode): 0xad166710
+2026-04-01 12:58:54 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 12:58:54 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_3.4p1.RL
+2026-04-01 12:58:54 [INFO   ] Connected (version 2.0, client OpenSSH_3.4p1.RL)
+2026-04-01 12:58:54 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 12:58:54 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-01 12:58:54 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-01 12:58:54 [DEBUG  ] client encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 12:58:54 [DEBUG  ] server encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 12:58:54 [DEBUG  ] client mac: hmac-sha1, hmac-md5
+2026-04-01 12:58:54 [DEBUG  ] server mac: hmac-sha1, hmac-md5
+2026-04-01 12:58:54 [DEBUG  ] client compress: none
+2026-04-01 12:58:54 [DEBUG  ] server compress: none
+2026-04-01 12:58:54 [DEBUG  ] client lang: <none>
+2026-04-01 12:58:54 [DEBUG  ] server lang: <none>
+2026-04-01 12:58:54 [DEBUG  ] kex follows: False
+2026-04-01 12:58:54 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 12:58:54 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-01 12:58:54 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 12:58:54 [DEBUG  ] Cipher: aes128-cbc
+2026-04-01 12:58:54 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 12:58:54 [DEBUG  ] Compression: none
+2026-04-01 12:58:54 [DEBUG  ] === End of kex handshake ===
+2026-04-01 12:58:55 [DEBUG  ] Got server p (2049 bits)
+2026-04-01 12:58:56 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-01 12:58:56 [DEBUG  ] Switch to new keys ...
+2026-04-01 12:58:57 [DEBUG  ] userauth is OK
+2026-04-01 12:58:57 [INFO   ] Authentication (password) successful!
+2026-04-01 12:58:57 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 12:58:57 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-01 12:58:57 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 12:58:57 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:58:57 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 12:58:57 [DEBUG  ] Banner [172.16.3.196]: '\n\n\n\na03-sw196#'
+2026-04-01 12:58:57 [INFO   ] Shell [172.16.3.196], промпт: 'a03-sw196'
+2026-04-01 12:58:58 [DEBUG  ] run [172.16.3.196]: show version
+2026-04-01 12:58:59 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a03-sw196#terminal datadump
+       Unit             SW version         Boot version         HW version      
+------------------- ------------------- ----------
+2026-04-01 12:58:59 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a03-sw196#terminal datadump
+       Unit             SW version         Boot version         HW version      
+------------------- ------------------- ------------------- ------------------- 
+         1         
+2026-04-01 12:58:59 [DEBUG  ] run [172.16.3.196]: show system
+2026-04-01 12:58:59 [DEBUG  ] [show system]: Unit                            Type                            
+---- ---------------------------------------------------------- 
+1    MES1124MB AC rev.B 28-port 100M/1G Managed Switch          
+3    
+2026-04-01 12:58:59 [DEBUG  ] [show system]: Unit                            Type                            
+---- ---------------------------------------------------------- 
+1    MES1124MB AC rev.B 28-port 100M/1G Managed Switch          
+3    MES1124MB AC rev.B 28-port 100M/1G Managed Switch 
+2026-04-01 12:58:59 [INFO   ] Модель по prompt 'mes1124mb': mes1124mb
+2026-04-01 12:58:59 [INFO   ] Подключено: 172.16.3.196 → mes1124mb (Eltex MES1124MB)
+2026-04-01 12:59:02 [INFO   ] RUN [172.16.3.196] action=show_all_ports port=fa1 cmd='sh int st'
+2026-04-01 12:59:02 [DEBUG  ] Reusing cached session [172.16.3.196] proto=ssh
+2026-04-01 12:59:02 [DEBUG  ] run [172.16.3.196]: sh int st
+2026-04-01 12:59:08 [DEBUG  ] [sh int st]: Flow Link           Up Time      Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode
+-------- ------------ ------  ----- -------- ---- --
+2026-04-01 12:59:22 [INFO   ] RUN [172.16.3.196] action=mac_table port=fa3/0/2 cmd='sh mac add int fa3/0/2'
+2026-04-01 12:59:22 [DEBUG  ] Reusing cached session [172.16.3.196] proto=ssh
+2026-04-01 12:59:22 [DEBUG  ] run [172.16.3.196]: sh mac add int fa3/0/2
+2026-04-01 12:59:25 [DEBUG  ] [sh mac add int fa3/0/2]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ----------
+2026-04-01 12:59:26 [INFO   ] RUN [172.16.3.196] action=cable_test port=fa3/0/2 cmd='test cable-diagnostics tdr int fa3/0/2'
+2026-04-01 12:59:26 [DEBUG  ] Reusing cached session [172.16.3.196] proto=ssh
+2026-04-01 12:59:26 [DEBUG  ] run [172.16.3.196]: test cable-diagnostics tdr int fa3/0/2
+2026-04-01 12:59:26 [DEBUG  ] [test cable-diagnostics tdr int fa3/0/2]: ....
+ Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+fa3/0/2   1-2         Open             0      01-Apr-2026 12:59:26 
+   
+2026-04-01 12:59:30 [INFO   ] RUN [172.16.3.196] action=port_errors port=fa3/0/2 cmd='sh int cou fa3/0/2'
+2026-04-01 12:59:30 [DEBUG  ] Reusing cached session [172.16.3.196] proto=ssh
+2026-04-01 12:59:30 [DEBUG  ] run [172.16.3.196]: sh int cou fa3/0/2
+2026-04-01 12:59:31 [DEBUG  ] [sh int cou fa3/0/2]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    fa3/0/2           0            0            0            0    
+2026-04-01 12:59:33 [INFO   ] RUN [172.16.3.196] action=dhcp_bindings port=fa3/0/2 cmd='sh ip dhcp snooping binding'
+2026-04-01 12:59:33 [DEBUG  ] Reusing cached session [172.16.3.196] proto=ssh
+2026-04-01 12:59:33 [DEBUG  ] run [172.16.3.196]: sh ip dhcp snooping binding
+2026-04-01 12:59:33 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 2
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+5c:e9:31:69:d9:df  10
+2026-04-01 12:59:35 [INFO   ] DISCONNECT [172.16.3.196] proto=ssh
+2026-04-01 12:59:35 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 12:59:35 [DEBUG  ] EOF in transport thread
+2026-04-01 13:00:15 [INFO   ] === CONNECT host=172.16.2.172 user=andr proto=telnet src=91.205.167.6 enable=True
+2026-04-01 13:00:15 [INFO   ] Определение модели [172.16.2.172] proto=telnet
+2026-04-01 13:00:15 [DEBUG  ] Probe banner [172.16.2.172]: '\r\n\r\r\nUser Name:'
+2026-04-01 13:00:15 [INFO   ] Модель по telnet баннеру 'User Name:': linksys
+2026-04-01 13:00:15 [INFO   ] Подключено: 172.16.2.172 → linksys (Linksys)
+2026-04-01 13:00:17 [INFO   ] RUN [172.16.2.172] action=show_all_ports port=e2 cmd='sh int st'
+2026-04-01 13:00:17 [DEBUG  ] Opening new session [172.16.2.172] proto=telnet
+2026-04-01 13:00:18 [DEBUG  ] TelnetSession banner [172.16.2.172]: '\r\n\r\r\nUser Name:'
+2026-04-01 13:00:18 [INFO   ] TelnetSession: Linksys обнаружен по 'User Name:' [172.16.2.172]
+2026-04-01 13:00:18 [DEBUG  ] TelnetSession: логин [172.16.2.172]
+2026-04-01 13:00:18 [DEBUG  ] TelnetSession after-login [172.16.2.172]: 'andr\r\n\rPassword:'
+2026-04-01 13:00:18 [DEBUG  ] TelnetSession: пароль [172.16.2.172]
+2026-04-01 13:00:20 [DEBUG  ] TelnetSession after-pass [172.16.2.172]: '********\r\n\r\r\na02-sw172# '
+2026-04-01 13:00:20 [INFO   ] TelnetSession: вошли [172.16.2.172], промпт='a02-sw172', linksys=True
+2026-04-01 13:00:20 [DEBUG  ] TelnetSession.run [172.16.2.172]: sh int st
+2026-04-01 13:00:21 [INFO   ] TelnetSession result [172.16.2.172]: 1682 байт
+2026-04-01 13:00:25 [INFO   ] RUN [172.16.2.172] action=show_all_ports port=e2 cmd='sh int st'
+2026-04-01 13:00:25 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:00:25 [DEBUG  ] TelnetSession.run [172.16.2.172]: sh int st
+2026-04-01 13:00:26 [INFO   ] TelnetSession result [172.16.2.172]: 1444 байт
+2026-04-01 13:00:31 [INFO   ] RUN [172.16.2.172] action=mac_table port=e2 cmd='sh mac add eth e2'
+2026-04-01 13:00:31 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:00:31 [DEBUG  ] TelnetSession.run [172.16.2.172]: sh mac add eth e2
+2026-04-01 13:00:37 [INFO   ] TelnetSession result [172.16.2.172]: 120 байт
+2026-04-01 13:00:39 [INFO   ] RUN [172.16.2.172] action=port_errors port=e2 cmd='sh int cou eth e2'
+2026-04-01 13:00:39 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:00:39 [DEBUG  ] TelnetSession.run [172.16.2.172]: sh int cou eth e2
+2026-04-01 13:00:40 [INFO   ] TelnetSession result [172.16.2.172]: 572 байт
+2026-04-01 13:00:42 [INFO   ] RUN [172.16.2.172] action=dhcp_bindings port=e2 cmd='sh ip dhcp snooping binding'
+2026-04-01 13:00:42 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:00:42 [DEBUG  ] TelnetSession.run [172.16.2.172]: sh ip dhcp snooping binding
+2026-04-01 13:00:42 [INFO   ] TelnetSession result [172.16.2.172]: 702 байт
+2026-04-01 13:00:53 [INFO   ] RUN [172.16.2.172] action=cable_test port=g2 cmd='test c t g2'
+2026-04-01 13:00:53 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:00:53 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t g2
+2026-04-01 13:00:58 [INFO   ] TelnetSession result [172.16.2.172]: 36 байт
+2026-04-01 13:01:11 [INFO   ] RUN [172.16.2.172] action=cable_test port=e4 cmd='test c t e4'
+2026-04-01 13:01:11 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:01:11 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t e4
+2026-04-01 13:01:15 [INFO   ] TelnetSession result [172.16.2.172]: 34 байт
+2026-04-01 13:01:17 [INFO   ] RUN [172.16.2.172] action=cable_test port=e5 cmd='test c t e5'
+2026-04-01 13:01:17 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:01:17 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t e5
+2026-04-01 13:01:21 [INFO   ] TelnetSession result [172.16.2.172]: 35 байт
+2026-04-01 13:01:23 [INFO   ] RUN [172.16.2.172] action=cable_test port=e6 cmd='test c t e6'
+2026-04-01 13:01:23 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:01:23 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t e6
+2026-04-01 13:01:29 [INFO   ] TelnetSession result [172.16.2.172]: 34 байт
+2026-04-01 13:01:31 [INFO   ] RUN [172.16.2.172] action=cable_test port=e7 cmd='test c t e7'
+2026-04-01 13:01:31 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:01:31 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t e7
+2026-04-01 13:01:35 [INFO   ] TelnetSession result [172.16.2.172]: 35 байт
+2026-04-01 13:01:42 [INFO   ] RUN [172.16.2.172] action=cable_test port=e8 cmd='test c t e8'
+2026-04-01 13:01:42 [DEBUG  ] Reusing cached session [172.16.2.172] proto=telnet
+2026-04-01 13:01:42 [DEBUG  ] TelnetSession.run [172.16.2.172]: test c t e8
+2026-04-01 13:01:45 [INFO   ] TelnetSession result [172.16.2.172]: 66 байт
+2026-04-01 13:01:55 [INFO   ] DISCONNECT [172.16.2.172] proto=telnet
+2026-04-01 13:33:30 [INFO   ] === CONNECT host=172.16.2.209 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 13:33:30 [INFO   ] Определение модели [172.16.2.209] proto=ssh
+2026-04-01 13:33:30 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 13:33:30 [DEBUG  ] starting thread (client mode): 0xad165d10
+2026-04-01 13:33:30 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 13:33:30 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_3.4p1.RL
+2026-04-01 13:33:30 [INFO   ] Connected (version 2.0, client OpenSSH_3.4p1.RL)
+2026-04-01 13:33:30 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 13:33:30 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-01 13:33:30 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-01 13:33:30 [DEBUG  ] client encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 13:33:30 [DEBUG  ] server encrypt: aes128-cbc, 3des-cbc, arcfour, aes192-cbc, aes256-cbc
+2026-04-01 13:33:30 [DEBUG  ] client mac: hmac-sha1, hmac-md5
+2026-04-01 13:33:30 [DEBUG  ] server mac: hmac-sha1, hmac-md5
+2026-04-01 13:33:30 [DEBUG  ] client compress: none
+2026-04-01 13:33:30 [DEBUG  ] server compress: none
+2026-04-01 13:33:30 [DEBUG  ] client lang: <none>
+2026-04-01 13:33:30 [DEBUG  ] server lang: <none>
+2026-04-01 13:33:30 [DEBUG  ] kex follows: False
+2026-04-01 13:33:30 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 13:33:30 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-01 13:33:30 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 13:33:30 [DEBUG  ] Cipher: aes128-cbc
+2026-04-01 13:33:30 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 13:33:30 [DEBUG  ] Compression: none
+2026-04-01 13:33:30 [DEBUG  ] === End of kex handshake ===
+2026-04-01 13:33:30 [DEBUG  ] Got server p (2049 bits)
+2026-04-01 13:33:32 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-01 13:33:32 [DEBUG  ] Switch to new keys ...
+2026-04-01 13:33:32 [DEBUG  ] userauth is OK
+2026-04-01 13:33:32 [INFO   ] Authentication (password) successful!
+2026-04-01 13:33:32 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 13:33:32 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-01 13:33:32 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 13:33:32 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:33:33 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:33:33 [DEBUG  ] Banner [172.16.2.209]: '\n\n\n\na02-sw209#'
+2026-04-01 13:33:33 [INFO   ] Shell [172.16.2.209], промпт: 'a02-sw209'
+2026-04-01 13:33:34 [DEBUG  ] run [172.16.2.209]: show version
+2026-04-01 13:33:34 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw209#terminal datadump
+       Unit             SW version         Boot version         HW version      
+------------------- ------------------- ----------
+2026-04-01 13:33:34 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw209#terminal datadump
+       Unit             SW version         Boot version         HW version      
+------------------- ------------------- ------------------- ------------------- 
+         1         
+2026-04-01 13:33:34 [DEBUG  ] run [172.16.2.209]: show system
+2026-04-01 13:33:35 [DEBUG  ] [show system]: Unit                            Type                            
+---- ---------------------------------------------------------- 
+1    MES1124MB AC rev.B 28-port 100M/1G Managed Switch          
+3    
+2026-04-01 13:33:35 [DEBUG  ] [show system]: Unit                            Type                            
+---- ---------------------------------------------------------- 
+1    MES1124MB AC rev.B 28-port 100M/1G Managed Switch          
+3    MES1124MB AC rev.B 28-port 100M/1G Managed Switch 
+2026-04-01 13:33:35 [INFO   ] Модель по prompt 'mes1124mb': mes1124mb
+2026-04-01 13:33:35 [INFO   ] Подключено: 172.16.2.209 → mes1124mb (Eltex MES1124MB)
+2026-04-01 13:33:37 [INFO   ] RUN [172.16.2.209] action=show_all_ports port=fa8 cmd='sh int st'
+2026-04-01 13:33:37 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:33:37 [DEBUG  ] run [172.16.2.209]: sh int st
+2026-04-01 13:33:44 [DEBUG  ] [sh int st]: Flow Link           Up Time      Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode
+-------- ------------ ------  ----- -------- ---- --
+2026-04-01 13:33:59 [INFO   ] RUN [172.16.2.209] action=mac_table port=fa1/0/8 cmd='sh mac add int fa1/0/8'
+2026-04-01 13:33:59 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:33:59 [DEBUG  ] run [172.16.2.209]: sh mac add int fa1/0/8
+2026-04-01 13:34:04 [DEBUG  ] [sh mac add int fa1/0/8]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ----------
+2026-04-01 13:34:10 [INFO   ] RUN [172.16.2.209] action=mac_table port=fa1/0/1 cmd='sh mac add int fa1/0/1'
+2026-04-01 13:34:10 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:10 [DEBUG  ] run [172.16.2.209]: sh mac add int fa1/0/1
+2026-04-01 13:34:15 [DEBUG  ] [sh mac add int fa1/0/1]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ---------- 
+  3092     18:d6:c7:8b:78:4d    fa1/0/1    dynamic
+2026-04-01 13:34:17 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa1/0/1 cmd='sh int cou fa1/0/1'
+2026-04-01 13:34:17 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:17 [DEBUG  ] run [172.16.2.209]: sh int cou fa1/0/1
+2026-04-01 13:34:18 [DEBUG  ] [sh int cou fa1/0/1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    fa1/0/1        94046033      79454         329      4360180382
+2026-04-01 13:34:25 [INFO   ] RUN [172.16.2.209] action=clear_errors port=fa1/0/1 cmd='clear cou fa1/0/1'
+2026-04-01 13:34:25 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:25 [DEBUG  ] run [172.16.2.209]: clear cou fa1/0/1
+2026-04-01 13:34:25 [DEBUG  ] [clear cou fa1/0/1]: (нет вывода)
+2026-04-01 13:34:26 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa1/0/1 cmd='sh int cou fa1/0/1'
+2026-04-01 13:34:26 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:26 [DEBUG  ] run [172.16.2.209]: sh int cou fa1/0/1
+2026-04-01 13:34:27 [DEBUG  ] [sh int cou fa1/0/1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    fa1/0/1           0            0            0            0    
+2026-04-01 13:34:29 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa1/0/1 cmd='sh int cou fa1/0/1'
+2026-04-01 13:34:29 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:29 [DEBUG  ] run [172.16.2.209]: sh int cou fa1/0/1
+2026-04-01 13:34:30 [DEBUG  ] [sh int cou fa1/0/1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+    fa1/0/1           5            0            0           393   
+2026-04-01 13:34:32 [INFO   ] RUN [172.16.2.209] action=dhcp_bindings port=fa1/0/1 cmd='sh ip dhcp snooping binding'
+2026-04-01 13:34:32 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:32 [DEBUG  ] run [172.16.2.209]: sh ip dhcp snooping binding
+2026-04-01 13:34:34 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 21
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+14:cc:20:d1:0c:b7  1
+2026-04-01 13:34:45 [INFO   ] RUN [172.16.2.209] action=mac_table port=fa1/0/2 cmd='sh mac add int fa1/0/2'
+2026-04-01 13:34:45 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:34:45 [DEBUG  ] run [172.16.2.209]: sh mac add int fa1/0/2
+2026-04-01 13:34:50 [DEBUG  ] [sh mac add int fa1/0/2]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ---------- 
+  3638     c4:6e:1f:fd:25:ad    fa1/0/2    dynamic
+2026-04-01 13:35:07 [INFO   ] RUN [172.16.2.209] action=mac_table port=fa3/0/17 cmd='sh mac add int fa3/0/17'
+2026-04-01 13:35:07 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:07 [DEBUG  ] run [172.16.2.209]: sh mac add int fa3/0/17
+2026-04-01 13:35:12 [DEBUG  ] [sh mac add int fa3/0/17]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ---------- 
+  3092     b4:b0:24:4e:f9:4d    fa3/0/17   dynamic
+2026-04-01 13:35:13 [INFO   ] RUN [172.16.2.209] action=mac_table port=fa3/0/17 cmd='sh mac add int fa3/0/17'
+2026-04-01 13:35:13 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:13 [DEBUG  ] run [172.16.2.209]: sh mac add int fa3/0/17
+2026-04-01 13:35:19 [DEBUG  ] [sh mac add int fa3/0/17]: Vlan        Mac Address         Port       Type    
+-------- --------------------- ---------- ---------- 
+  3092     b4:b0:24:4e:f9:4d    fa3/0/17   dynamic
+2026-04-01 13:35:20 [INFO   ] RUN [172.16.2.209] action=cable_test port=fa3/0/17 cmd='test cable-diagnostics tdr int fa3/0/17'
+2026-04-01 13:35:20 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:20 [DEBUG  ] run [172.16.2.209]: test cable-diagnostics tdr int fa3/0/17
+2026-04-01 13:35:20 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa3/0/17 cmd='sh int cou fa3/0/17'
+2026-04-01 13:35:20 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:20 [DEBUG  ] run [172.16.2.209]: sh int cou fa3/0/17
+2026-04-01 13:35:21 [DEBUG  ] [sh int cou fa3/0/17]: . Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+fa3/0/17  1-2          OK              --     01-Apr-2026 13:35:21 
+       
+2026-04-01 13:35:27 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa3/0/17 cmd='sh int cou fa3/0/17'
+2026-04-01 13:35:27 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:27 [DEBUG  ] run [172.16.2.209]: sh int cou fa3/0/17
+2026-04-01 13:35:28 [DEBUG  ] [sh int cou fa3/0/17]: Received Pause Frames: 0
+2026-04-01 13:35:30 [INFO   ] RUN [172.16.2.209] action=port_errors port=fa3/0/17 cmd='sh int cou fa3/0/17'
+2026-04-01 13:35:30 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:30 [DEBUG  ] run [172.16.2.209]: sh int cou fa3/0/17
+2026-04-01 13:35:31 [DEBUG  ] [test cable-diagnostics tdr int fa3/0/17]: Some ports has status of link UP. Continuing test can break links. Proceed?  (Y/N)[Y] Y
+..01-Apr-2026 13:35:21 %LINK-W-Down:  fa3/0/17
+01-Apr-2026 13:35:22 %LINK-I-Up:  fa3/0/17, 100Mbps FULL duplex
+s
+2026-04-01 13:35:38 [INFO   ] RUN [172.16.2.209] action=dhcp_bindings port=fa3/0/17 cmd='sh ip dhcp snooping binding'
+2026-04-01 13:35:38 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:38 [DEBUG  ] run [172.16.2.209]: sh ip dhcp snooping binding
+2026-04-01 13:35:39 [DEBUG  ] [sh int cou fa3/0/17]: ------------ 223285829      483946    sh ip dhcp snooping bindiVLAN Interface  
+ ------------ ---------- ---- ---------- 
+14:cc:20:d1:0c:b7  10.2.209.62     70061        learned    3092 fa1/0/16   
+18
+2026-04-01 13:35:42 [INFO   ] RUN [172.16.2.209] action=dhcp_bindings port=fa3/0/17 cmd='sh ip dhcp snooping binding'
+2026-04-01 13:35:42 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:35:42 [DEBUG  ] run [172.16.2.209]: sh ip dhcp snooping binding
+2026-04-01 13:35:44 [DEBUG  ] [sh ip dhcp snooping binding]: ng
+Total number of binding: 21
+   MAC Address       IP Address    Lease (sec)     Type    ------------------ ---------------84134        learned    3092 fa1/0/1    
+1c:3b:f3:b7:6e:41  10.2.209.58     
+2026-04-01 13:36:02 [DEBUG  ] [sh ip dhcp snooping binding]: ngTotal number of binding: 21
+learned    3092 18:d6:c7:8b:78:4d  10.2.209.2      3092 
+1c:3b:f3:b7:6e:41  learned    3092 10.2.209.46     3092 fa1/0/12   
+50:d4:f7:2a:50:09  10.2.209.22     84357     
+2026-04-01 13:36:07 [INFO   ] RUN [172.16.2.209] action=dhcp_bindings port=fa3/0/17 cmd='sh ip dhcp snooping binding'
+2026-04-01 13:36:07 [DEBUG  ] Reusing cached session [172.16.2.209] proto=ssh
+2026-04-01 13:36:07 [DEBUG  ] run [172.16.2.209]: sh ip dhcp snooping binding
+2026-04-01 13:36:08 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 21
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+14:cc:20:d1:0c:b7  1
+2026-04-01 13:36:12 [INFO   ] DISCONNECT [172.16.2.209] proto=ssh
+2026-04-01 13:36:12 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 13:36:12 [DEBUG  ] EOF in transport thread
+2026-04-01 13:37:17 [INFO   ] === CONNECT host=172.16.2.156 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 13:37:17 [INFO   ] Определение модели [172.16.2.156] proto=ssh
+2026-04-01 13:37:17 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 13:37:17 [DEBUG  ] starting thread (client mode): 0xad165f90
+2026-04-01 13:37:17 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 13:37:19 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.1
+2026-04-01 13:37:19 [INFO   ] Connected (version 2.0, client OpenSSH_5.1)
+2026-04-01 13:37:19 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 13:37:19 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha256, diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+2026-04-01 13:37:19 [DEBUG  ] server key: ssh-rsa
+2026-04-01 13:37:19 [DEBUG  ] client encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-01 13:37:19 [DEBUG  ] server encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-01 13:37:19 [DEBUG  ] client mac: hmac-sha1
+2026-04-01 13:37:19 [DEBUG  ] server mac: hmac-sha1
+2026-04-01 13:37:19 [DEBUG  ] client compress: none, zlib@openssh.com
+2026-04-01 13:37:19 [DEBUG  ] server compress: none, zlib@openssh.com
+2026-04-01 13:37:19 [DEBUG  ] client lang: <none>
+2026-04-01 13:37:19 [DEBUG  ] server lang: <none>
+2026-04-01 13:37:19 [DEBUG  ] kex follows: False
+2026-04-01 13:37:19 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 13:37:19 [DEBUG  ] Kex: diffie-hellman-group14-sha1
+2026-04-01 13:37:19 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 13:37:19 [DEBUG  ] Cipher: aes128-ctr
+2026-04-01 13:37:19 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 13:37:19 [DEBUG  ] Compression: none
+2026-04-01 13:37:19 [DEBUG  ] === End of kex handshake ===
+2026-04-01 13:37:19 [DEBUG  ] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2026-04-01 13:37:19 [DEBUG  ] Switch to new keys ...
+2026-04-01 13:37:19 [DEBUG  ] userauth is OK
+2026-04-01 13:37:19 [INFO   ] Auth banner: b'\n\r\t\tEltex Switch\n\n'
+2026-04-01 13:37:19 [INFO   ] Authentication (password) successful!
+2026-04-01 13:37:19 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 13:37:19 [DEBUG  ] [chan 0] Max packet out: 32768 bytes
+2026-04-01 13:37:19 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 13:37:19 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:37:19 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:37:20 [DEBUG  ] Banner [172.16.2.156]: '\n \n\n<134> 1-Apr-2026 13:37:18.860 CLI-6-User andr logged in via ssh from 91.205.167.9\na02-sw156#'
+2026-04-01 13:37:20 [INFO   ] Shell [172.16.2.156], промпт: 'a02-sw156'
+2026-04-01 13:37:20 [DEBUG  ] run [172.16.2.156]: show version
+2026-04-01 13:37:21 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-01 13:37:21 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-01 13:37:21 [DEBUG  ] run [172.16.2.156]: show system
+2026-04-01 13:37:21 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-01 13:37:21 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-01 13:37:21 [DEBUG  ] run [172.16.2.156]: show system information
+2026-04-01 13:37:21 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address    
+2026-04-01 13:37:21 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address           : 90:54:b7:21:9b:40
+Software Serial Number 
+2026-04-01 13:37:21 [INFO   ] Модель по серийнику ESF: mes2424b_ac
+2026-04-01 13:37:21 [INFO   ] Подключено: 172.16.2.156 → mes2424b_ac (Eltex MES2424B AC)
+2026-04-01 13:37:24 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:37:24 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:24 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:37:24 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-01 13:37:30 [INFO   ] RUN [172.16.2.156] action=mac_table port=gi0/17 cmd='sh mac int gi0/17'
+2026-04-01 13:37:30 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:30 [DEBUG  ] run [172.16.2.156]: sh mac int gi0/17
+2026-04-01 13:37:30 [DEBUG  ] [sh mac int gi0/17]: Vlan    Mac Address         Type     ConnectionId        Ports
+----    -----------         ----     -------------       -----
+2562    a4:a9:30:58:fa:11   Learnt                       gi 0/17  
+Total M
+2026-04-01 13:37:33 [INFO   ] RUN [172.16.2.156] action=cable_test port=gi0/17 cmd='test cable-diagnostics gi0/17'
+2026-04-01 13:37:33 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:33 [DEBUG  ] run [172.16.2.156]: test cable-diagnostics gi0/17
+2026-04-01 13:37:34 [DEBUG  ] [test cable-diagnostics gi0/17]: Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+gi 0/17   1-2          OK             46      01-Apr-2026 13:37:33      
+    
+2026-04-01 13:37:36 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/17 cmd='show int cou gi0/17'
+2026-04-01 13:37:36 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:36 [DEBUG  ] run [172.16.2.156]: show int cou gi0/17
+2026-04-01 13:37:36 [DEBUG  ] [show int cou gi0/17]: Port      InOctet    InUcast    InMcast    InBcast    InDiscard   InErrs     InHCOctet
+----      -------    -------    -------    -------    ---------   ------     ---------
+gi 0/17   2293091379 80088
+2026-04-01 13:37:40 [INFO   ] RUN [172.16.2.156] action=clear_errors port=gi0/17 cmd='clear cou gi0/17'
+2026-04-01 13:37:40 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:40 [DEBUG  ] run [172.16.2.156]: clear cou gi0/17
+2026-04-01 13:37:41 [DEBUG  ] [clear cou gi0/17]: (нет вывода)
+2026-04-01 13:37:42 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/17 cmd='show int cou gi0/17'
+2026-04-01 13:37:42 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:42 [DEBUG  ] run [172.16.2.156]: show int cou gi0/17
+2026-04-01 13:37:42 [DEBUG  ] [show int cou gi0/17]: Port      InOctet    InUcast    InMcast    InBcast    InDiscard   InErrs     InHCOctet
+----      -------    -------    -------    -------    ---------   ------     ---------
+gi 0/17   1282       7    
+2026-04-01 13:37:44 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/17 cmd='show int cou gi0/17'
+2026-04-01 13:37:44 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:44 [DEBUG  ] run [172.16.2.156]: show int cou gi0/17
+2026-04-01 13:37:44 [DEBUG  ] [show int cou gi0/17]: Port      InOctet    InUcast    InMcast    InBcast    InDiscard   InErrs     InHCOctet
+----      -------    -------    -------    -------    ---------   ------     ---------
+gi 0/17   25277      48   
+2026-04-01 13:37:45 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/17 cmd='show int cou gi0/17'
+2026-04-01 13:37:45 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:45 [DEBUG  ] run [172.16.2.156]: show int cou gi0/17
+2026-04-01 13:37:45 [DEBUG  ] [show int cou gi0/17]: Port      InOctet    InUcast    InMcast    InBcast    InDiscard   InErrs     InHCOctet
+----      -------    -------    -------    -------    ---------   ------     ---------
+gi 0/17   26544      55   
+2026-04-01 13:37:49 [INFO   ] RUN [172.16.2.156] action=dhcp_bindings port=gi0/17 cmd='show ip binding'
+2026-04-01 13:37:49 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:49 [DEBUG  ] run [172.16.2.156]: show ip binding
+2026-04-01 13:37:49 [DEBUG  ] [show ip binding]: Host Binding Information
+                            ------------------------
+Switch:  default
+-------  -------
+VLAN Host MAC          Host IP         Port       Gateway IP      Type   Lease Time 
+---
+2026-04-01 13:37:54 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:37:54 [DEBUG  ] run [172.16.2.156]: conf
+2026-04-01 13:37:54 [DEBUG  ] [conf]: (нет вывода)
+2026-04-01 13:38:06 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:06 [DEBUG  ] run [172.16.2.156]: int gi0/22
+2026-04-01 13:38:06 [DEBUG  ] [int gi0/22]: (нет вывода)
+2026-04-01 13:38:11 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:11 [DEBUG  ] run [172.16.2.156]: shutdown
+2026-04-01 13:38:11 [DEBUG  ] [shutdown]: <132> 1-Apr-2026 13:38:10.650 CFA-4-Interface gi 0/22 link status DOWN
+2026-04-01 13:38:16 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:16 [DEBUG  ] run [172.16.2.156]: no shut
+2026-04-01 13:38:17 [DEBUG  ] [no shut]: <132> 1-Apr-2026 13:38:16.790 CFA-4-Interface gi 0/22 link status DOWN
+2026-04-01 13:38:24 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:38:24 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:24 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:38:24 [DEBUG  ] [show interfaces sta]: % Invalid Command
+2026-04-01 13:38:27 [INFO   ] RUN [172.16.2.156] action=mac_table port=gi0/17 cmd='sh mac int gi0/17'
+2026-04-01 13:38:27 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:27 [DEBUG  ] run [172.16.2.156]: sh mac int gi0/17
+2026-04-01 13:38:27 [DEBUG  ] [sh mac int gi0/17]: sh mac
+   ^
+% Invalid input detected at '^' marker
+2026-04-01 13:38:28 [INFO   ] DISCONNECT [172.16.2.156] proto=ssh
+2026-04-01 13:38:28 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-01 13:38:28 [DEBUG  ] EOF in transport thread
+2026-04-01 13:38:34 [INFO   ] === CONNECT host=172.16.2.156 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-01 13:38:34 [INFO   ] Определение модели [172.16.2.156] proto=ssh
+2026-04-01 13:38:34 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-01 13:38:34 [DEBUG  ] starting thread (client mode): 0xad165810
+2026-04-01 13:38:34 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-01 13:38:36 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.1
+2026-04-01 13:38:36 [INFO   ] Connected (version 2.0, client OpenSSH_5.1)
+2026-04-01 13:38:36 [DEBUG  ] === Key exchange possibilities ===
+2026-04-01 13:38:36 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha256, diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+2026-04-01 13:38:36 [DEBUG  ] server key: ssh-rsa
+2026-04-01 13:38:36 [DEBUG  ] client encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-01 13:38:36 [DEBUG  ] server encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-01 13:38:36 [DEBUG  ] client mac: hmac-sha1
+2026-04-01 13:38:36 [DEBUG  ] server mac: hmac-sha1
+2026-04-01 13:38:36 [DEBUG  ] client compress: none, zlib@openssh.com
+2026-04-01 13:38:36 [DEBUG  ] server compress: none, zlib@openssh.com
+2026-04-01 13:38:36 [DEBUG  ] client lang: <none>
+2026-04-01 13:38:36 [DEBUG  ] server lang: <none>
+2026-04-01 13:38:36 [DEBUG  ] kex follows: False
+2026-04-01 13:38:36 [DEBUG  ] === Key exchange agreements ===
+2026-04-01 13:38:36 [DEBUG  ] Kex: diffie-hellman-group14-sha1
+2026-04-01 13:38:36 [DEBUG  ] HostKey: ssh-rsa
+2026-04-01 13:38:36 [DEBUG  ] Cipher: aes128-ctr
+2026-04-01 13:38:36 [DEBUG  ] MAC: hmac-sha1
+2026-04-01 13:38:36 [DEBUG  ] Compression: none
+2026-04-01 13:38:36 [DEBUG  ] === End of kex handshake ===
+2026-04-01 13:38:36 [DEBUG  ] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2026-04-01 13:38:36 [DEBUG  ] Switch to new keys ...
+2026-04-01 13:38:36 [DEBUG  ] userauth is OK
+2026-04-01 13:38:36 [INFO   ] Auth banner: b'\n\r\t\tEltex Switch\n\n'
+2026-04-01 13:38:36 [INFO   ] Authentication (password) successful!
+2026-04-01 13:38:36 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-01 13:38:36 [DEBUG  ] [chan 0] Max packet out: 32768 bytes
+2026-04-01 13:38:36 [DEBUG  ] Secsh channel 0 opened.
+2026-04-01 13:38:36 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:38:36 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-01 13:38:37 [DEBUG  ] Banner [172.16.2.156]: '\n \n\n<134> 1-Apr-2026 13:38:36.660 CLI-6-User andr logged in via ssh from 91.205.167.9\na02-sw156#'
+2026-04-01 13:38:37 [INFO   ] Shell [172.16.2.156], промпт: 'a02-sw156'
+2026-04-01 13:38:38 [DEBUG  ] run [172.16.2.156]: show version
+2026-04-01 13:38:38 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-01 13:38:38 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-01 13:38:38 [DEBUG  ] run [172.16.2.156]: show system
+2026-04-01 13:38:38 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-01 13:38:38 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-01 13:38:38 [DEBUG  ] run [172.16.2.156]: show system information
+2026-04-01 13:38:38 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address    
+2026-04-01 13:38:38 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address           : 90:54:b7:21:9b:40
+Software Serial Number 
+2026-04-01 13:38:38 [INFO   ] Модель по серийнику ESF: mes2424b_ac
+2026-04-01 13:38:38 [INFO   ] Подключено: 172.16.2.156 → mes2424b_ac (Eltex MES2424B AC)
+2026-04-01 13:38:44 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:38:44 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:44 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:38:44 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-01 13:38:47 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:38:47 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:47 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:38:47 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-01 13:38:59 [INFO   ] RUN [172.16.2.156] action=mac_table port=gi0/17 cmd='sh mac int gi0/17'
+2026-04-01 13:38:59 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:38:59 [DEBUG  ] run [172.16.2.156]: sh mac int gi0/17
+2026-04-01 13:39:00 [DEBUG  ] [sh mac int gi0/17]: Vlan    Mac Address         Type     ConnectionId        Ports
+----    -----------         ----     -------------       -----
+2562    a4:a9:30:58:fa:11   Learnt                       gi 0/17  
+Total M
+2026-04-01 13:39:02 [INFO   ] RUN [172.16.2.156] action=cable_test port=gi0/17 cmd='test cable-diagnostics gi0/17'
+2026-04-01 13:39:02 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:02 [DEBUG  ] run [172.16.2.156]: test cable-diagnostics gi0/17
+2026-04-01 13:39:02 [DEBUG  ] [test cable-diagnostics gi0/17]: Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+gi 0/17   1-2          OK             46      01-Apr-2026 13:39:02      
+    
+2026-04-01 13:39:10 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:10 [DEBUG  ] run [172.16.2.156]: conf
+2026-04-01 13:39:10 [DEBUG  ] [conf]: (нет вывода)
+2026-04-01 13:39:12 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:12 [DEBUG  ] run [172.16.2.156]: ex
+2026-04-01 13:39:12 [DEBUG  ] [ex]: (нет вывода)
+2026-04-01 13:39:17 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:39:17 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:17 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:39:18 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-01 13:39:21 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:21 [DEBUG  ] run [172.16.2.156]: conf
+2026-04-01 13:39:21 [DEBUG  ] [conf]: (нет вывода)
+2026-04-01 13:39:23 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:23 [DEBUG  ] run [172.16.2.156]: int gi0/22
+2026-04-01 13:39:24 [DEBUG  ] [int gi0/22]: (нет вывода)
+2026-04-01 13:39:26 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:26 [DEBUG  ] run [172.16.2.156]: shut
+2026-04-01 13:39:27 [DEBUG  ] [shut]: <132> 1-Apr-2026 13:39:26.310 CFA-4-Interface gi 0/22 link status DOWN
+2026-04-01 13:39:28 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:28 [DEBUG  ] run [172.16.2.156]: ex
+2026-04-01 13:39:28 [DEBUG  ] [ex]: (нет вывода)
+2026-04-01 13:39:31 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:31 [DEBUG  ] run [172.16.2.156]: sh int sta
+2026-04-01 13:39:31 [DEBUG  ] [sh int sta]: sh int
+   ^
+% Invalid input detected at '^' marker
+2026-04-01 13:39:34 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:39:34 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:34 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:39:34 [DEBUG  ] [show interfaces sta]: % Invalid Command
+2026-04-01 13:39:36 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:36 [DEBUG  ] run [172.16.2.156]: ex
+2026-04-01 13:39:37 [DEBUG  ] [ex]: (нет вывода)
+2026-04-01 13:39:38 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/17 cmd='show interfaces sta'
+2026-04-01 13:39:38 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:38 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-01 13:39:38 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-01 13:39:43 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:43 [DEBUG  ] run [172.16.2.156]: conf
+2026-04-01 13:39:43 [DEBUG  ] [conf]: (нет вывода)
+2026-04-01 13:39:45 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:45 [DEBUG  ] run [172.16.2.156]: int gi0/22
+2026-04-01 13:39:45 [DEBUG  ] [int gi0/22]: (нет вывода)
+2026-04-01 13:39:48 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:48 [DEBUG  ] run [172.16.2.156]: no shut
+2026-04-01 13:39:48 [DEBUG  ] [no shut]: <132> 1-Apr-2026 13:39:47.710 CFA-4-Interface gi 0/22 link status DOWN
+2026-04-01 13:39:49 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:49 [DEBUG  ] run [172.16.2.156]: ex
+2026-04-01 13:39:50 [DEBUG  ] [ex]: (нет вывода)
+2026-04-01 13:39:50 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-01 13:39:50 [DEBUG  ] run [172.16.2.156]: ex
+2026-04-01 13:39:51 [DEBUG  ] [ex]: (нет вывода)
+2026-04-01 13:39:54 [INFO   ] DISCONNECT [172.16.2.156] proto=ssh
+2026-04-01 13:39:54 [INFO   ] Disconnect (code 2): Connection Closed
+2026-04-08 09:03:45 [INFO   ] ============================================================
+2026-04-08 09:03:45 [INFO   ] SwitchPro v6 запущен
+2026-04-08 09:03:45 [INFO   ] ============================================================
+2026-04-08 09:03:45 [INFO   ] SwitchPro v6 запущен
+2026-04-08 09:07:15 [INFO   ] === CONNECT host=172.16.2.201 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-08 09:07:15 [INFO   ] Определение модели [172.16.2.201] proto=ssh
+2026-04-08 09:07:15 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-08 09:07:15 [DEBUG  ] starting thread (client mode): 0x3cf32e40
+2026-04-08 09:07:15 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-08 09:07:15 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.9p1.RL
+2026-04-08 09:07:15 [INFO   ] Connected (version 2.0, client OpenSSH_5.9p1.RL)
+2026-04-08 09:07:15 [DEBUG  ] === Key exchange possibilities ===
+2026-04-08 09:07:15 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group1-sha1
+2026-04-08 09:07:15 [DEBUG  ] server key: ssh-rsa, ssh-dss
+2026-04-08 09:07:15 [DEBUG  ] client encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-08 09:07:15 [DEBUG  ] server encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+2026-04-08 09:07:15 [DEBUG  ] client mac: hmac-sha1
+2026-04-08 09:07:15 [DEBUG  ] server mac: hmac-sha1
+2026-04-08 09:07:15 [DEBUG  ] client compress: none
+2026-04-08 09:07:15 [DEBUG  ] server compress: none
+2026-04-08 09:07:15 [DEBUG  ] client lang: <none>
+2026-04-08 09:07:15 [DEBUG  ] server lang: <none>
+2026-04-08 09:07:15 [DEBUG  ] kex follows: False
+2026-04-08 09:07:15 [DEBUG  ] === Key exchange agreements ===
+2026-04-08 09:07:15 [DEBUG  ] Kex: diffie-hellman-group-exchange-sha1
+2026-04-08 09:07:15 [DEBUG  ] HostKey: ssh-rsa
+2026-04-08 09:07:15 [DEBUG  ] Cipher: aes128-ctr
+2026-04-08 09:07:15 [DEBUG  ] MAC: hmac-sha1
+2026-04-08 09:07:15 [DEBUG  ] Compression: none
+2026-04-08 09:07:15 [DEBUG  ] === End of kex handshake ===
+2026-04-08 09:07:15 [DEBUG  ] Got server p (2048 bits)
+2026-04-08 09:07:17 [DEBUG  ] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2026-04-08 09:07:17 [DEBUG  ] Switch to new keys ...
+2026-04-08 09:07:17 [DEBUG  ] userauth is OK
+2026-04-08 09:07:17 [INFO   ] Authentication (password) successful!
+2026-04-08 09:07:17 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-08 09:07:17 [DEBUG  ] [chan 0] Max packet out: 4096 bytes
+2026-04-08 09:07:17 [DEBUG  ] Secsh channel 0 opened.
+2026-04-08 09:07:17 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-08 09:07:18 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-08 09:07:18 [DEBUG  ] Banner [172.16.2.201]: '\n\n\nPassword: ss Verification\n\nUsername: \nPassword: ss Verification\n\nUsername: \n\na02-sw201>'
+2026-04-08 09:07:18 [INFO   ] Shell [172.16.2.201], промпт: 'a02-sw201'
+2026-04-08 09:07:19 [DEBUG  ] run [172.16.2.201]: show version
+2026-04-08 09:07:19 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw201#terminal datadump
+SW version    1.4.11.5 ( date  08-Apr-2020 time  13:49:34 )
+Boot version    1.3.5.06 ( date  21-Jul-2013 time  15:12:10 )
+HW versio
+2026-04-08 09:07:19 [DEBUG  ] [show version]: terminal length 0
+% Unrecognized command
+a02-sw201#terminal datadump
+SW version    1.4.11.5 ( date  08-Apr-2020 time  13:49:34 )
+Boot version    1.3.5.06 ( date  21-Jul-2013 time  15:12:10 )
+HW version    V02
+2026-04-08 09:07:19 [DEBUG  ] run [172.16.2.201]: show system
+2026-04-08 09:07:19 [DEBUG  ] [show system]: System Description:                       SF300-48 48-Port 10/100 Managed Switch
+System Up Time (days,hour:min:sec):       62,10:18:18
+System Contact:                           
+System Name:          
+2026-04-08 09:07:19 [DEBUG  ] [show system]: System Description:                       SF300-48 48-Port 10/100 Managed Switch
+System Up Time (days,hour:min:sec):       62,10:18:18
+System Contact:                           
+System Name:                              a02-sw201
+System Location:    
+2026-04-08 09:07:19 [INFO   ] Модель по паттерну 'SF300-48': cisco_sf300
+2026-04-08 09:07:19 [INFO   ] Подключено: 172.16.2.201 → cisco_sf300 (Cisco SF300)
+2026-04-08 09:07:32 [INFO   ] RUN [172.16.2.201] action=show_all_ports port=fa1 cmd='sh int st'
+2026-04-08 09:07:32 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-08 09:07:32 [DEBUG  ] run [172.16.2.201]: sh int st
+2026-04-08 09:07:34 [DEBUG  ] [sh int st]: Flow Link          Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State       Pressure Mode
+-------- ------------ ------  ----- -------- ---- ----------- -------- -------
+fa1      100M-
+2026-04-08 09:07:38 [INFO   ] RUN [172.16.2.201] action=mac_table port=fa1 cmd='sh mac add int fa1'
+2026-04-08 09:07:38 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-08 09:07:38 [DEBUG  ] run [172.16.2.201]: sh mac add int fa1
+2026-04-08 09:07:42 [DEBUG  ] [sh mac add int fa1]: Flags: I - Internal usage VLAN
+Aging time is 300 sec
+    Vlan          Mac Address         Port       Type    
+------------ --------------------- ---------- ----------
+2026-04-08 09:07:44 [INFO   ] RUN [172.16.2.201] action=cable_test port=fa1 cmd='test cable-diagnostics tdr int fa1'
+2026-04-08 09:07:44 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-08 09:07:44 [DEBUG  ] run [172.16.2.201]: test cable-diagnostics tdr int fa1
+2026-04-08 09:07:50 [DEBUG  ] [test cable-diagnostics tdr int fa1]: ..
+Cable on port fa1 is open at 54 m
+2026-04-08 09:07:51 [INFO   ] RUN [172.16.2.201] action=port_errors port=fa1 cmd='sh int cou fa1'
+2026-04-08 09:07:51 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-08 09:07:51 [DEBUG  ] run [172.16.2.201]: sh int cou fa1
+2026-04-08 09:07:52 [DEBUG  ] [sh int cou fa1]: Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
+---------------- ------------ ------------ ------------ ------------ 
+      fa1             0            0            0            0    
+2026-04-08 09:08:50 [INFO   ] RUN [172.16.2.201] action=dhcp_bindings port=fa1 cmd='sh ip dhcp snooping binding'
+2026-04-08 09:08:50 [DEBUG  ] Reusing cached session [172.16.2.201] proto=ssh
+2026-04-08 09:08:50 [DEBUG  ] run [172.16.2.201]: sh ip dhcp snooping binding
+2026-04-08 09:08:50 [DEBUG  ] [sh ip dhcp snooping binding]: Total number of binding: 14
+   MAC Address       IP Address    Lease (sec)     Type    VLAN Interface  
+------------------ --------------- ------------ ---------- ---- ---------- 
+00:16:36:9b:5c:05  1
+2026-04-08 09:08:52 [INFO   ] DISCONNECT [172.16.2.201] proto=ssh
+2026-04-08 09:08:52 [DEBUG  ] [chan 0] EOF sent (0)
+2026-04-08 09:08:52 [DEBUG  ] EOF in transport thread
+2026-04-08 09:09:00 [INFO   ] === CONNECT host=172.16.2.156 user=andr proto=ssh src=91.205.167.6 enable=True
+2026-04-08 09:09:00 [INFO   ] Определение модели [172.16.2.156] proto=ssh
+2026-04-08 09:09:00 [DEBUG  ] DSS patch skipped: No module named 'paramiko.dsskey'
+2026-04-08 09:09:00 [DEBUG  ] starting thread (client mode): 0x3cf56e90
+2026-04-08 09:09:00 [DEBUG  ] Local version/idstring: SSH-2.0-paramiko_4.0.0
+2026-04-08 09:09:03 [DEBUG  ] Remote version/idstring: SSH-2.0-OpenSSH_5.1
+2026-04-08 09:09:03 [INFO   ] Connected (version 2.0, client OpenSSH_5.1)
+2026-04-08 09:09:03 [DEBUG  ] === Key exchange possibilities ===
+2026-04-08 09:09:03 [DEBUG  ] kex algos: diffie-hellman-group-exchange-sha256, diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+2026-04-08 09:09:03 [DEBUG  ] server key: ssh-rsa
+2026-04-08 09:09:03 [DEBUG  ] client encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-08 09:09:03 [DEBUG  ] server encrypt: 3des-cbc, aes128-cbc, aes256-cbc, aes128-ctr, aes256-ctr
+2026-04-08 09:09:03 [DEBUG  ] client mac: hmac-sha1
+2026-04-08 09:09:03 [DEBUG  ] server mac: hmac-sha1
+2026-04-08 09:09:03 [DEBUG  ] client compress: none, zlib@openssh.com
+2026-04-08 09:09:03 [DEBUG  ] server compress: none, zlib@openssh.com
+2026-04-08 09:09:03 [DEBUG  ] client lang: <none>
+2026-04-08 09:09:03 [DEBUG  ] server lang: <none>
+2026-04-08 09:09:03 [DEBUG  ] kex follows: False
+2026-04-08 09:09:03 [DEBUG  ] === Key exchange agreements ===
+2026-04-08 09:09:03 [DEBUG  ] Kex: diffie-hellman-group14-sha1
+2026-04-08 09:09:03 [DEBUG  ] HostKey: ssh-rsa
+2026-04-08 09:09:03 [DEBUG  ] Cipher: aes128-ctr
+2026-04-08 09:09:03 [DEBUG  ] MAC: hmac-sha1
+2026-04-08 09:09:03 [DEBUG  ] Compression: none
+2026-04-08 09:09:03 [DEBUG  ] === End of kex handshake ===
+2026-04-08 09:09:03 [DEBUG  ] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2026-04-08 09:09:03 [DEBUG  ] Switch to new keys ...
+2026-04-08 09:09:03 [DEBUG  ] userauth is OK
+2026-04-08 09:09:03 [INFO   ] Auth banner: b'\n\r\t\tEltex Switch\n\n'
+2026-04-08 09:09:03 [INFO   ] Authentication (password) successful!
+2026-04-08 09:09:03 [DEBUG  ] [chan 0] Max packet in: 32768 bytes
+2026-04-08 09:09:03 [DEBUG  ] [chan 0] Max packet out: 32768 bytes
+2026-04-08 09:09:03 [DEBUG  ] Secsh channel 0 opened.
+2026-04-08 09:09:03 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-08 09:09:03 [DEBUG  ] [chan 0] Sesch channel 0 request ok
+2026-04-08 09:09:03 [DEBUG  ] Banner [172.16.2.156]: '\n \n\n<134> 8-Apr-2026 09:09:02.680 CLI-6-User andr logged in via ssh from 91.205.167.9\na02-sw156#'
+2026-04-08 09:09:03 [INFO   ] Shell [172.16.2.156], промпт: 'a02-sw156'
+2026-04-08 09:09:04 [DEBUG  ] run [172.16.2.156]: show version
+2026-04-08 09:09:04 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-08 09:09:04 [DEBUG  ] [show version]: terminal length 0
+% Invalid Command
+a02-sw156#terminal datadump
+% Invalid Command
+     ^
+% Invalid input detected at '^' marker
+2026-04-08 09:09:04 [DEBUG  ] run [172.16.2.156]: show system
+2026-04-08 09:09:05 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-08 09:09:05 [DEBUG  ] [show system]: % Incomplete command.
+2026-04-08 09:09:05 [DEBUG  ] run [172.16.2.156]: show system information
+2026-04-08 09:09:05 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address    
+2026-04-08 09:09:05 [DEBUG  ] [show system information]: Hardware Version                  : 3v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+Hardware Serial Number            : ESF3006339
+Switch Base MAC Address           : 90:54:b7:21:9b:40
+Software Serial Number 
+2026-04-08 09:09:05 [INFO   ] Модель по серийнику ESF: mes2424b_ac
+2026-04-08 09:09:05 [INFO   ] Подключено: 172.16.2.156 → mes2424b_ac (Eltex MES2424B AC)
+2026-04-08 09:09:13 [INFO   ] RUN [172.16.2.156] action=show_all_ports port=gi0/1 cmd='show interfaces sta'
+2026-04-08 09:09:13 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-08 09:09:13 [DEBUG  ] run [172.16.2.156]: show interfaces sta
+2026-04-08 09:09:13 [DEBUG  ] [show interfaces sta]: Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     -------
+2026-04-08 09:09:16 [INFO   ] RUN [172.16.2.156] action=mac_table port=gi0/10 cmd='sh mac int gi0/10'
+2026-04-08 09:09:16 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-08 09:09:16 [DEBUG  ] run [172.16.2.156]: sh mac int gi0/10
+2026-04-08 09:09:16 [DEBUG  ] [sh mac int gi0/10]: Vlan    Mac Address         Type     ConnectionId        Ports
+----    -----------         ----     -------------       -----
+Total Mac Addresses displayed: 0
+2026-04-08 09:09:18 [INFO   ] RUN [172.16.2.156] action=cable_test port=gi0/10 cmd='test cable-diagnostics gi0/10'
+2026-04-08 09:09:18 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-08 09:09:18 [DEBUG  ] run [172.16.2.156]: test cable-diagnostics gi0/10
+2026-04-08 09:09:18 [DEBUG  ] [test cable-diagnostics gi0/10]: Port     Pair Result              Length [m] Date
+--------- ---- ------------------- ---------- --------------------------
+gi 0/10   1-2          Open           45      08-Apr-2026 09:09:18      
+    
+2026-04-08 09:09:31 [INFO   ] RUN [172.16.2.156] action=port_errors port=gi0/10 cmd='show int cou gi0/10'
+2026-04-08 09:09:31 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-08 09:09:31 [DEBUG  ] run [172.16.2.156]: show int cou gi0/10
+2026-04-08 09:09:31 [DEBUG  ] [show int cou gi0/10]: Port      InOctet    InUcast    InMcast    InBcast    InDiscard   InErrs     InHCOctet
+----      -------    -------    -------    -------    ---------   ------     ---------
+gi 0/10   0          0    
+2026-04-08 09:09:34 [INFO   ] RUN [172.16.2.156] action=clear_errors port=gi0/10 cmd='clear cou gi0/10'
+2026-04-08 09:09:34 [DEBUG  ] Reusing cached session [172.16.2.156] proto=ssh
+2026-04-08 09:09:34 [DEBUG  ] run [172.16.2.156]: clear cou gi0/10
+2026-04-08 09:09:35 [DEBUG  ] [clear cou gi0/10]: (нет вывода)
+2026-04-08 09:09:36 [INFO   ] DISCONNECT [172.16.2.156] proto=ssh
+2026-04-08 09:09:36 [INFO   ] Disconnect (code 2): Connection Closed

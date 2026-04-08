@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SwitchCheck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e14;--bg2:#0f1520;--bg3:#151d2e;
+  --border:#1e2d45;--border2:#243450;
+  --accent:#00d4ff;--green:#00e5a0;--red:#ff4466;--yellow:#ffcc44;
+  --text:#c8d8f0;--text2:#6a8aaa;--text3:#3a5a7a;
+  --mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);display:flex;flex-direction:column}
+
+header{background:var(--bg2);border-bottom:1px solid var(--border);height:50px;
+  display:flex;align-items:center;padding:0 20px;gap:16px;flex-shrink:0;z-index:50}
+.logo{font-size:16px;font-weight:800;color:var(--accent);letter-spacing:.06em;
+  display:flex;align-items:center;gap:8px}
+.logo-icon{width:26px;height:26px;background:linear-gradient(135deg,var(--accent),var(--green));
+  border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.tabs{display:flex;gap:2px;margin-left:8px}
+.tab{padding:6px 16px;border-radius:5px 5px 0 0;font-size:12px;font-weight:600;
+  letter-spacing:.05em;cursor:pointer;border:1px solid transparent;border-bottom:none;
+  transition:.15s;color:var(--text2)}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--bg);border-color:var(--border);color:var(--accent)}
+.status-bar{margin-left:auto;display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;color:var(--text2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--text3);transition:.3s}
+.dot.on{background:var(--green);box-shadow:0 0 8px var(--green)}
+.dot.err{background:var(--red)}
+
+.pages{flex:1;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.page{display:none;flex:1;overflow:hidden;flex-direction:row;min-height:0}
+#page-ref.active{overflow-y:auto;overflow-x:hidden;flex-direction:column}
+.page.active{display:flex}
+
+.sidebar{width:300px;background:var(--bg2);border-right:1px solid var(--border);
+  overflow-y:auto;flex-shrink:0;display:flex;flex-direction:column}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.conn-header{padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;border-bottom:1px solid var(--border);background:var(--bg3)}
+.conn-header:hover{background:#1a2540}
+.conn-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);display:flex;align-items:center;gap:6px}
+.conn-title::before{content:'';display:block;width:3px;height:10px;
+  background:var(--accent);border-radius:2px}
+.conn-arrow{color:var(--text3);font-size:10px;transition:.2s}
+.conn-arrow.open{transform:rotate(180deg)}
+.conn-body{padding:14px;border-bottom:1px solid var(--border);display:flex;flex-direction:column}
+.conn-body.collapsed{display:none}
+
+.sw-badge{margin:12px 14px;background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(0,229,160,.08));
+  border:1px solid rgba(0,212,255,.2);border-radius:8px;padding:10px 12px;
+  display:flex;align-items:center;gap:8px}
+.sw-badge-model{font-size:12px;font-weight:600;color:var(--accent);font-family:var(--mono)}
+.sw-badge-host{font-size:10px;color:var(--text2);font-family:var(--mono)}
+
+.actions{padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.section-lbl{font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--text3);
+  text-transform:uppercase;margin-bottom:4px}
+
+label{display:block;font-size:10px;color:var(--text2);margin-bottom:4px;font-family:var(--mono)}
+input[type=text],input[type=number],select{
+  width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:5px;
+  color:var(--text);font-family:var(--mono);font-size:12px;padding:7px 9px;
+  outline:none;transition:border-color .2s;margin-bottom:10px}
+input:focus,select:focus{border-color:var(--accent)}
+select option{background:var(--bg2)}
+input[type=checkbox]{width:13px;height:13px;accent-color:var(--accent);margin-right:4px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:8px 14px;border:none;border-radius:5px;font-family:var(--sans);
+  font-size:11px;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  transition:all .15s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btn-primary{background:var(--accent);color:#000;width:100%}
+.btn-primary:hover:not(:disabled){background:#00eeff;box-shadow:0 0 14px rgba(0,212,255,.3)}
+.btn-action{background:var(--bg);border:1px solid var(--border2);color:var(--text);
+  width:100%;justify-content:flex-start;padding:9px 11px}
+.btn-action:hover:not(:disabled){border-color:var(--accent);color:var(--accent);
+  background:rgba(0,212,255,.05)}
+.btn-danger{background:rgba(255,68,102,.1);border:1px solid rgba(255,68,102,.3);
+  color:var(--red);width:100%}
+.btn-danger:hover:not(:disabled){background:rgba(255,68,102,.2);border-color:var(--red)}
+.btn-sm{padding:5px 10px;font-size:10px}
+
+/* Port selector row */
+.port-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.port-row>div{display:flex;flex-direction:column}
+
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.term-header{background:var(--bg2);border-bottom:1px solid var(--border);
+  padding:8px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.term-dots{display:flex;gap:5px}
+.tdot{width:10px;height:10px;border-radius:50%}
+.tdot:nth-child(1){background:#ff5f56}
+.tdot:nth-child(2){background:#ffbd2e}
+.tdot:nth-child(3){background:#27c93f}
+.term-title{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2)}
+.term-body{flex:1;overflow-y:auto;padding:16px;font-family:var(--mono);font-size:12px;
+  line-height:1.7;background:var(--bg);min-height:0}
+.term-body::-webkit-scrollbar{width:6px}
+.term-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.cmd-bar{background:var(--bg2);border-top:1px solid var(--border);
+  padding:10px 16px;display:none;gap:8px;align-items:center;flex-shrink:0}
+.cmd-bar input{flex:1;margin-bottom:0;height:34px}
+.cmd-bar .btn{height:34px;width:auto;padding:0 16px}
+
+.ob{margin-bottom:18px;animation:fadeIn .2s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+.ob-cmd{color:var(--accent);font-size:11px;margin-bottom:5px;opacity:.8;
+  display:flex;align-items:center;gap:7px}
+.ob-cmd::before{content:'›';color:var(--green);font-size:15px}
+.ob-meta{font-size:9px;color:var(--text3);margin-bottom:6px;margin-left:18px}
+.ob-text{background:var(--bg2);border:1px solid var(--border);border-radius:5px;
+  padding:12px 14px;white-space:pre-wrap;word-break:break-all;color:var(--text);
+  font-size:11px;line-height:1.6;max-height:380px;overflow-y:auto}
+.ob-text::-webkit-scrollbar{width:4px}
+.ob-text::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.ob-text.err{border-color:rgba(255,68,102,.3);background:rgba(255,68,102,.04);color:var(--red)}
+.ob-text.ok{border-color:rgba(0,229,160,.2)}
+.welcome{color:var(--text3);text-align:center;padding:50px 20px;font-size:12px;line-height:2}
+.welcome .big{font-size:28px;display:block;margin-bottom:10px}
+.hl-up{color:var(--green)}.hl-dn{color:var(--red)}.hl-mac{color:var(--green)}.hl-err{color:var(--red)}
+
+.spin{display:inline-block;width:12px;height:12px;border:2px solid var(--border2);
+  border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite;
+  vertical-align:middle;margin-right:5px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.en-block{background:var(--bg);border:1px solid var(--border2);border-radius:6px;
+  padding:10px;margin-top:-4px;margin-bottom:10px}
+
+/* Page 2 */
+.ref-page{padding:20px;display:flex;flex-direction:column;gap:16px;width:100%}
+.ref-page::-webkit-scrollbar{width:6px}
+.ref-page::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.ref-section{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.ref-toggle{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+  user-select:none;transition:.15s}
+.ref-toggle:hover{background:var(--bg3)}
+.ref-toggle-title{font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+.ref-toggle-arr{color:var(--text2);font-size:11px;transition:.2s}
+.ref-toggle-arr.open{transform:rotate(180deg)}
+.ref-body{display:none;padding:0 16px 14px}
+.ref-body.open{display:block}
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;margin-top:8px}
+th{text-align:left;padding:7px 10px;background:var(--bg3);color:var(--text2);
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top}
+td:first-child{color:var(--accent);white-space:nowrap;padding-right:16px;min-width:200px}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+code{color:var(--yellow);font-family:var(--mono)}
+
+.port-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.port-cell{background:var(--bg3);border:1px solid var(--border);border-radius:5px;
+  padding:7px 10px;font-family:var(--mono);font-size:11px}
+.port-cell .ip{color:var(--text2);font-size:10px}
+.port-cell .pn{color:var(--accent);font-weight:600}
+.port-cell .eth{color:var(--text);font-size:10px}
+
+#logModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;
+  align-items:center;justify-content:center}
+.log-modal-inner{background:var(--bg2);border:1px solid var(--border2);border-radius:10px;
+  width:90%;max-width:900px;max-height:80vh;display:flex;flex-direction:column;overflow:hidden}
+.log-modal-hdr{padding:12px 18px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center}
+.log-modal-hdr span{font-size:12px;font-weight:600;color:var(--accent);font-family:var(--mono)}
+#logContent{flex:1;overflow-y:auto;padding:14px 18px;font-family:var(--mono);font-size:10px;
+  line-height:1.6;color:var(--text);white-space:pre-wrap;word-break:break-all;background:var(--bg)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><div class="logo-icon">⚡</div>SwitchCheck</div>
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('diag')">🔌 Диагностика</div>
+    <div class="tab" onclick="switchTab('ref')">📋 Шпаргалка</div>
+  </div>
+  <div class="status-bar">
+    <div class="dot" id="dot"></div>
+    <span id="statusTxt">Не подключено</span>
+  </div>
+</header>
+
+<div class="pages">
+
+<!-- ═══ TAB 1 ═══ -->
+<div class="page active" id="page-diag">
+  <aside class="sidebar">
+
+    <div class="conn-header" onclick="toggleConn()">
+      <div class="conn-title">Подключение</div>
+      <div class="conn-arrow open" id="connArrow">▼</div>
+    </div>
+    <div class="conn-body" id="connBody">
+      <label>IP адрес / хост</label>
+      <input type="text" id="host" placeholder="192.168.1.1">
+      <label>Логин</label>
+      <input type="text" id="username" placeholder="admin">
+      <label>Файл паролей</label>
+      <input type="text" id="pwFile" value="passwords.txt">
+      <label>Протокол</label>
+      <select id="protocol" style="margin-bottom:10px">
+        <option value="ssh">SSH</option>
+        <option value="telnet">Telnet</option>
+      </select>
+      <label>Source IP <span style="color:var(--text3)">(если ограничен доступ)</span></label>
+      <input type="text" id="srcIp" placeholder="Авто">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span id="myIp" style="font-size:10px;color:var(--text2);font-family:var(--mono)">Мой IP: …</span>
+        <button class="btn btn-action btn-sm" style="width:auto;margin:0" onclick="useMyIp()">↑ Вставить</button>
+      </div>
+      <label style="display:flex;align-items:center;cursor:pointer;margin-bottom:8px">
+        <input type="checkbox" id="useEnable" onchange="toggleEnable()"> Использовать enable
+      </label>
+      <div class="en-block" id="enBlock" style="display:none">
+        <label style="display:flex;align-items:center;cursor:pointer;margin-bottom:8px">
+          <input type="checkbox" id="enSame" checked onchange="toggleEnPw()"> Enable-пароль = основной
+        </label>
+        <div id="enPwDiv" style="display:none">
+          <label>Файл enable-пароля</label>
+          <input type="text" id="enPwFile" value="enable_password.txt" style="margin-bottom:0">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="btnConnect">
+        <span>🔌</span> Подключиться
+      </button>
+    </div>
+
+    <div id="swBadge" style="display:none" class="sw-badge">
+      <div style="font-size:20px">🔀</div>
+      <div>
+        <div class="sw-badge-model" id="swModel">—</div>
+        <div class="sw-badge-host" id="swHost">—</div>
+      </div>
+    </div>
+
+    <div class="actions" id="actPanel" style="display:none">
+      <div class="section-lbl">Порт</div>
+      <!-- Port type + number -->
+      <div class="port-row">
+        <div>
+          <label>Тип порта</label>
+          <select id="portType" style="margin-bottom:0"></select>
+        </div>
+        <div>
+          <label>Номер</label>
+          <input type="number" id="portNum" value="1" min="1" max="48" style="margin-bottom:0">
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--text2);margin-bottom:10px">
+        Полный порт: <span id="portPreview" style="color:var(--accent)">fa1</span>
+      </div>
+
+      <div class="section-lbl">Действия</div>
+      <button class="btn btn-action" onclick="doAction('show_all_ports')">📊 Все порты — статус</button>
+      <button class="btn btn-action" onclick="doAction('mac_table')">🖧 MAC-адреса на порту</button>
+      <button class="btn btn-action" onclick="doAction('cable_test')">🔬 Тест кабеля</button>
+      <button class="btn btn-action" onclick="doAction('port_errors')">⚠️ Ошибки на порту</button>
+      <button class="btn btn-action" onclick="doAction('clear_errors')">🗑️ Сбросить счётчики</button>
+      <button class="btn btn-action" onclick="doAction('dhcp_bindings')" style="margin-top:4px">
+        🌐 IP привязки (DHCP snooping)
+      </button>
+      <button class="btn btn-action" onclick="doDisconnect()" style="margin-top:8px;border-color:var(--border2);color:var(--text2)">
+        🔌 Отключиться (exit)
+      </button>
+    </div>
+
+  </aside>
+
+  <main class="main">
+    <div class="term-header">
+      <div class="term-dots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>
+      <div class="term-title">⚡ Терминал</div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-action btn-sm" onclick="showLog()">📋 Лог</button>
+        <button class="btn btn-action btn-sm" onclick="clearTerm()">Очистить</button>
+      </div>
+    </div>
+    <div class="term-body" id="term">
+      <div class="welcome">
+        <span class="big">🔀</span>
+        Введите IP, логин, файл паролей<br>и нажмите <strong>«Подключиться»</strong><br>
+        <br><span style="font-size:10px">Cisco SF300 · MES2424B AC · MES2424B 28port · MES1124MB · MES2324B · Linksys</span>
+      </div>
+    </div>
+    <div class="cmd-bar" id="cmdBar">
+      <input type="text" id="customCmd" placeholder="Своя команда…" onkeydown="if(event.key==='Enter')runCustom()">
+      <button class="btn btn-primary" onclick="runCustom()">Выполнить</button>
+    </div>
+  </main>
+</div>
+
+
+<!-- ═══ TAB 2: Cheatsheet ═══ -->
+<div class="page" id="page-ref">
+<div class="ref-page">
+  <div style="font-size:14px;font-weight:700;color:var(--accent)">📋 Шпаргалка по командам</div>
+  <p style="font-size:11px;color:var(--text2)">
+    Звёздочка <code>*</code> = номер порта. В скобках — альтернативные варианты обозначения.
+  </p>
+
+  <!-- Linksys -->
+  <div class="ref-section">
+    <div class="ref-toggle" onclick="toggleRef(this)">
+      <div class="ref-toggle-title">🔵 Linksys 24-port</div>
+      <div class="ref-toggle-arr">▼</div>
+    </div>
+    <div class="ref-body">
+      <table>
+        <tr><th>Команда</th><th>Действие</th></tr>
+        <tr><td>sh int st</td><td>Проверка всех портов</td></tr>
+        <tr><td>sh mac add eth e<code>*</code> (g<code>*</code>)</td><td>Проверка MAC-адреса порта</td></tr>
+        <tr><td>test c t e<code>*</code> (g<code>*</code>)</td><td>Тест кабеля порта</td></tr>
+        <tr><td>sh int cou eth e<code>*</code> (g<code>*</code>)</td><td>Проверка ошибок на порту</td></tr>
+        <tr><td>clear cou eth e<code>*</code> (g<code>*</code>)</td><td>Очистка ошибок с порта</td></tr>
+        <tr><td>sh ip dhcp snooping binding</td><td>Проверка IP-адресов</td></tr>
+      </table>
+      <p style="font-size:10px;color:var(--text2);margin-top:8px">
+        💡 Порты: <code>e*</code> = ethernet (100M), <code>g*</code> = gigabit uplink
+      </p>
+    </div>
+  </div>
+
+  <!-- Cisco SF300 + MES1124MB + MES2324B -->
+  <div class="ref-section">
+    <div class="ref-toggle" onclick="toggleRef(this)">
+      <div class="ref-toggle-title">🔷 Cisco SF300 · MES1124MB rev.B · MES2324B 1G/10G</div>
+      <div class="ref-toggle-arr">▼</div>
+    </div>
+    <div class="ref-body">
+      <table>
+        <tr><th>Команда</th><th>Действие</th></tr>
+        <tr><td>sh int st</td><td>Проверка всех портов</td></tr>
+        <tr><td>sh mac add int fa<code>*</code> (gi<code>*</code>)</td><td>Проверка MAC-адреса порта</td></tr>
+        <tr><td>test cable-diagnostics tdr int fa<code>*</code> (gi<code>*</code>)</td><td>Тест кабеля порта</td></tr>
+        <tr><td>sh int cou fa<code>*</code> (gi<code>*</code>)</td><td>Проверка ошибок на порту</td></tr>
+        <tr><td>clear cou fa<code>*</code> (gi<code>*</code>)</td><td>Очистка ошибок с порта</td></tr>
+        <tr><td>sh ip dhcp snooping binding</td><td>Проверка IP-адресов</td></tr>
+      </table>
+      <p style="font-size:10px;color:var(--text2);margin-top:8px">
+        💡 Порты отличаются в зависимости от свитча:<br>
+        <code>fa1</code>, <code>gi1</code>, <code>fa1/0/1</code>, <code>fa3/0/1</code>, <code>gi1/0/1</code>, <code>gi3/0/1</code><br>
+        Выбирай тип порта в выпадающем списке при диагностике.
+      </p>
+    </div>
+  </div>
+
+  <!-- MES2424B AC + 28port -->
+  <div class="ref-section">
+    <div class="ref-toggle" onclick="toggleRef(this)">
+      <div class="ref-toggle-title">🔶 Eltex MES2424B AC · MES2424B 28port</div>
+      <div class="ref-toggle-arr">▼</div>
+    </div>
+    <div class="ref-body">
+      <table>
+        <tr><th>Команда</th><th>Действие</th></tr>
+        <tr><td>show interfaces sta</td><td>Проверка всех портов</td></tr>
+        <tr><td>sh mac int g0/<code>*</code></td><td>Проверка MAC-адреса порта</td></tr>
+        <tr><td>test cable-diagnostics g0/<code>*</code></td><td>Тест кабеля порта</td></tr>
+        <tr><td>show int cou gi0/<code>*</code></td><td>Проверка ошибок на порту</td></tr>
+        <tr><td>clear cou gi0/<code>*</code></td><td>Очистка ошибок с порта</td></tr>
+        <tr><td>show ip binding</td><td>Проверка IP-адресов</td></tr>
+      </table>
+      <p style="font-size:10px;color:var(--text2);margin-top:8px">
+        💡 MES2424B AC определяется по серийному номеру (начинается с <code>ESF3</code>).<br>
+        MES2424B 28port — по имени устройства в промпте.
+      </p>
+    </div>
+  </div>
+
+  <!-- Port map -->
+  <div class="ref-section">
+    <div class="ref-toggle" onclick="toggleRef(this)">
+      <div class="ref-toggle-title">🗺️ Таблица IP → порт (последний октет IP)</div>
+      <div class="ref-toggle-arr open">▼</div>
+    </div>
+    <div class="ref-body open">
+      <p style="font-size:11px;color:var(--text2);margin-bottom:10px;margin-top:4px">
+        Принцип: последний октет IP кратен <strong style="color:var(--accent)">+4</strong> начиная с 2 → порт 1.
+        Например, <code>.2</code> → порт 1, <code>.6</code> → порт 2, <code>.10</code> → порт 3…
+      </p>
+      <div id="portMapGrid" class="port-grid"></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div><!-- /pages -->
+
+<!-- Log modal -->
+<div id="logModal">
+  <div class="log-modal-inner">
+    <div class="log-modal-hdr">
+      <span>📋 switchpro.log</span>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-action btn-sm" onclick="loadLog()">↻</button>
+        <button class="btn btn-action btn-sm" onclick="document.getElementById('logModal').style.display='none'">✕</button>
+      </div>
+    </div>
+    <pre id="logContent">(загрузка…)</pre>
+  </div>
+</div>
+
+<script>
+// ── State ──
+const st = {
+  host:null, username:null, pwFile:null, modelKey:null,
+  protocol:null, srcIp:null, enablePw:null, connected:false,
+  portTypes:["fa"], defaultPortType:"fa"
+};
+
+// ── Tabs ──
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i)=>{
+    t.classList.toggle('active', ['diag','ref'][i]===name);
+  });
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.toggle('active', p.id==='page-'+name);
+  });
+}
+
+// ── Collapsible connect ──
+function toggleConn() {
+  const b=document.getElementById('connBody'), a=document.getElementById('connArrow');
+  b.classList.toggle('collapsed');
+  a.classList.toggle('open', !b.classList.contains('collapsed'));
+}
+
+function toggleEnable() {
+  document.getElementById('enBlock').style.display =
+    document.getElementById('useEnable').checked ? '' : 'none';
+}
+function toggleEnPw() {
+  document.getElementById('enPwDiv').style.display =
+    document.getElementById('enSame').checked ? 'none' : '';
+}
+
+// ── Local IP ──
+(async()=>{
+  try{const r=await fetch('/api/local_ip');const d=await r.json();
+    if(d.ip) document.getElementById('myIp').textContent='Мой IP: '+d.ip;}catch(e){}
+})();
+function useMyIp(){
+  const m=document.getElementById('myIp').textContent.match(/[\d.]+/);
+  if(m) document.getElementById('srcIp').value=m[0];
+}
+
+// ── Port preview ──
+function updatePortPreview() {
+  const type = document.getElementById('portType').value;
+  const num  = document.getElementById('portNum').value;
+  document.getElementById('portPreview').textContent = type + num;
+}
+document.getElementById('portNum').addEventListener('input', updatePortPreview);
+
+function setPortTypes(types, defaultType) {
+  const sel = document.getElementById('portType');
+  sel.innerHTML = '';
+  types.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = t;
+    if(t === defaultType) o.selected = true;
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', updatePortPreview);
+  updatePortPreview();
+}
+
+// ── Connect ──
+document.getElementById('btnConnect').addEventListener('click', async()=>{
+  const host  = document.getElementById('host').value.trim();
+  const user  = document.getElementById('username').value.trim();
+  const pwF   = document.getElementById('pwFile').value.trim();
+  const proto = document.getElementById('protocol').value;
+  const srcIp = document.getElementById('srcIp').value.trim();
+  const useEn = document.getElementById('useEnable').checked;
+  const enSame= document.getElementById('enSame').checked;
+  const enPwF = document.getElementById('enPwFile').value.trim();
+
+  if(!host||!user){addOutput(null,null,'Укажите хост и логин',true);return;}
+
+  setStatus('connecting');
+  const btn=document.getElementById('btnConnect');
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span> Подключение…';
+  addOutput(`${proto} ${user}@${host}`,'<span class="spin"></span> Подключение…',null,false,true);
+
+  try{
+    const r=await fetch('/api/connect',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({host,username:user,password_file:pwF,protocol:proto,
+        source_ip:srcIp,use_enable:useEn,enable_same:enSame,enable_pw_file:enPwF})});
+    const d=await r.json();
+    if(d.success){
+      Object.assign(st,{host,username:user,pwFile:pwF,modelKey:d.model_key,
+        protocol:d.protocol||proto,srcIp:d.source_ip||srcIp,
+        enablePw:d.enable_password||null,connected:true,
+        portTypes:d.port_types||['fa'],defaultPortType:d.default_port_type||'fa'});
+      setStatus('on');
+      document.getElementById('swModel').textContent=d.model_name;
+      document.getElementById('swHost').textContent=host;
+      document.getElementById('swBadge').style.display='';
+      document.getElementById('actPanel').style.display='';
+      document.getElementById('cmdBar').style.display='flex';
+      setPortTypes(st.portTypes, st.defaultPortType);
+      // Auto-collapse after connect
+      if(!document.getElementById('connBody').classList.contains('collapsed')) toggleConn();
+      updateLast(`${proto} ${user}@${host}`,`✅ Подключено\nМодель: ${d.model_name}\nПорты: ${d.port_types.join(', ')}`,null);
+    } else {
+      setStatus('err');
+      updateLast(`${proto} ${user}@${host}`,null,`❌ ${d.error}`);
+    }
+  } catch(e){setStatus('err');updateLast(null,null,`Ошибка запроса: ${e.message}`);}
+  btn.disabled=false; btn.innerHTML='<span>🔌</span> Подключиться';
+});
+
+// ── Actions ──
+async function doAction(action){
+  if(!st.connected){addOutput(null,null,'⚠️ Нет подключения',true);return;}
+  const portType = document.getElementById('portType').value;
+  const portNum  = document.getElementById('portNum').value || '1';
+  const port     = portType + portNum;
+
+  if(action==='clear_errors'&&!confirm(`Сбросить счётчики ошибок на порту ${port}?`))return;
+
+  const labels={
+    show_all_ports:'Статус всех портов',
+    mac_table:`MAC на порту ${port}`,
+    cable_test:`Тест кабеля ${port}`,
+    port_errors:`Ошибки ${port}`,
+    clear_errors:`Сброс счётчиков ${port}`,
+    dhcp_bindings:'IP-привязки DHCP snooping'
+  };
+  addOutput(labels[action],'<span class="spin"></span> Выполняется…',null,false,true);
+  try{
+    const r=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({host:st.host,username:st.username,password_file:st.pwFile,
+        model_key:st.modelKey,action,port_num:portNum,port_type:portType,
+        protocol:st.protocol,source_ip:st.srcIp,enable_password:st.enablePw})});
+    const d=await r.json();
+    updateLast(d.command||labels[action],d.success?d.output:null,d.success?null:d.error);
+  } catch(e){updateLast(labels[action],null,'Ошибка: '+e.message);}
+}
+
+async function runCustom(){
+  if(!st.connected){addOutput(null,null,'⚠️ Нет подключения',true);return;}
+  const cmd=document.getElementById('customCmd').value.trim();
+  if(!cmd)return;
+  addOutput(cmd,'<span class="spin"></span> Выполняется…',null,false,true);
+  document.getElementById('customCmd').value='';
+  try{
+    const r=await fetch('/api/custom',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({host:st.host,username:st.username,password_file:st.pwFile,
+        command:cmd,model_key:st.modelKey,protocol:st.protocol,
+        source_ip:st.srcIp,enable_password:st.enablePw})});
+    const d=await r.json();
+    updateLast(cmd,d.success?d.output:null,d.success?null:d.error);
+  } catch(e){updateLast(cmd,null,'Ошибка: '+e.message);}
+}
+
+// ── Terminal ──
+let blk=0;
+function addOutput(cmd,info,err,isErr,pending=false){
+  const t=document.getElementById('term');
+  t.querySelector('.welcome')?.remove();
+  blk++;
+  const id='b'+blk, now=new Date().toLocaleTimeString('ru-RU');
+  let h=`<div class="ob" id="${id}">`;
+  if(cmd) h+=`<div class="ob-cmd">${esc(cmd)}</div>`;
+  h+=`<div class="ob-meta">${now}</div>`;
+  if(err||isErr) h+=`<div class="ob-text err">${esc(err||info||'')}</div>`;
+  else h+=`<div class="ob-text" id="${id}-t">${info||''}</div>`;
+  h+='</div>';
+  t.insertAdjacentHTML('beforeend',h);
+  t.scrollTop=t.scrollHeight;
+}
+function updateLast(cmd,out,err){
+  const el=document.getElementById('b'+blk);
+  if(!el)return;
+  const c=el.querySelector('.ob-cmd');
+  if(c&&cmd) c.textContent=cmd;
+  let te=document.getElementById('b'+blk+'-t');
+  if(!te){te=document.createElement('div');te.id='b'+blk+'-t';el.appendChild(te);}
+  if(err){te.className='ob-text err';te.textContent=err;}
+  else{te.className='ob-text ok';te.innerHTML=colorize(esc(out||'(нет вывода)'));}
+  document.getElementById('term').scrollTop=99999;
+}
+function clearTerm(){document.getElementById('term').innerHTML='';blk=0;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function colorize(t){
+  t=t.replace(/\b(Up|UP|Connected|connected)\b/g,'<span class="hl-up">$1</span>');
+  t=t.replace(/\b(Down|DOWN|Disconnected|notconnect)\b/g,'<span class="hl-dn">$1</span>');
+  t=t.replace(/([0-9a-fA-F]{2}[:\-]){5}[0-9a-fA-F]{2}/g,'<span class="hl-mac">$&</span>');
+  t=t.replace(/\b(Error|error|Err|fail|Fail|FAIL)\b/g,'<span class="hl-err">$&</span>');
+  return t;
+}
+
+
+// ── Log modal ──
+async function showLog(){document.getElementById('logModal').style.display='flex';await loadLog();}
+async function loadLog(){
+  try{
+    const r=await fetch('/api/log?lines=200');const d=await r.json();
+    const el=document.getElementById('logContent');
+    el.textContent=d.log||'(пусто)';
+    el.innerHTML=el.innerHTML
+      .replace(/\[ERROR  \]/g,'<span style="color:var(--red)">[ERROR  ]</span>')
+      .replace(/\[WARNING\]/g,'<span style="color:var(--yellow)">[WARNING]</span>')
+      .replace(/\[INFO   \]/g,'<span style="color:var(--green)">[INFO   ]</span>')
+      .replace(/\[DEBUG  \]/g,'<span style="color:var(--text3)">[DEBUG  ]</span>');
+    el.scrollTop=el.scrollHeight;
+  }catch(e){document.getElementById('logContent').textContent='Ошибка: '+e.message;}
+}
+document.getElementById('logModal').addEventListener('click',function(e){
+  if(e.target===this)this.style.display='none';
+});
+
+// ── Ref toggles ──
+function toggleRef(btn){
+  const body=btn.nextElementSibling,arr=btn.querySelector('.ref-toggle-arr');
+  body.classList.toggle('open');
+  arr.classList.toggle('open',body.classList.contains('open'));
+}
+
+// ── Port map ──
+(function(){
+  const rows=[
+    [2,'fa1/0/1',1],[6,'fa1/0/2',2],[10,'fa1/0/3',3],[14,'fa1/0/4',4],
+    [18,'fa1/0/5',5],[22,'fa1/0/6',6],[26,'fa1/0/7',7],[30,'fa1/0/8',8],
+    [34,'fa1/0/9',9],[38,'fa1/0/10',10],[42,'fa1/0/11',11],[46,'fa1/0/12',12],
+    [50,'fa1/0/13',13],[54,'fa1/0/14',14],[58,'fa1/0/15',15],[62,'fa1/0/16',16],
+    [66,'fa1/0/17',17],[70,'fa1/0/18',18],[74,'fa1/0/19',19],[78,'fa1/0/20',20],
+    [82,'fa1/0/21',21],[86,'fa1/0/22',22],[90,'fa1/0/23',23],[94,'fa1/0/24',24],
+    [98,'fa3/0/1',25],[102,'fa3/0/2',26],[106,'fa3/0/3',27],[110,'fa3/0/4',28],
+    [114,'fa3/0/5',29],[118,'fa3/0/6',30],[122,'fa3/0/7',31],[126,'fa3/0/8',32],
+    [130,'fa3/0/9',33],[134,'fa3/0/10',34],[138,'fa3/0/11',35],[142,'fa3/0/12',36],
+    [146,'fa3/0/13',37],[150,'fa3/0/14',38],[154,'fa3/0/15',39],[158,'fa3/0/16',40],
+    [162,'fa3/0/17',41],[166,'fa3/0/18',42],[170,'fa3/0/19',43],[174,'fa3/0/20',44],
+    [178,'fa3/0/21',45],[182,'fa3/0/22',46],[186,'fa3/0/23',47],[190,'fa3/0/24',48],
+  ];
+  const g=document.getElementById('portMapGrid');
+  rows.forEach(([ip,eth,port])=>{
+    const c=document.createElement('div');c.className='port-cell';
+    c.innerHTML=`<div class="ip">…<strong style="color:var(--accent)">${ip}</strong></div>`+
+      `<div class="pn">Порт ${port}</div><div class="eth">${eth}</div>`;
+    g.appendChild(c);
+  });
+})();
+
+['host','username'].forEach(id=>{
+  document.getElementById(id).addEventListener('keydown',e=>{
+    if(e.key==='Enter') document.getElementById('btnConnect').click();
+  });
+});
+
+async function doDisconnect(){
+  if(!st.connected) return;
+  addOutput('exit','<span class="spin"></span> Отключение…',null,false,true);
+  try{
+    await fetch('/api/disconnect',{method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({host:st.host,username:st.username,
+        password_file:st.pwFile,model_key:st.modelKey,
+        protocol:st.protocol,source_ip:st.srcIp,
+        enable_password:st.enablePw})});
+  }catch(e){}
+  // Сбросить state
+  Object.assign(st,{host:null,username:null,pwFile:null,modelKey:null,
+    protocol:null,srcIp:null,enablePw:null,connected:false});
+  setStatus('disconnected');
+  document.getElementById('swBadge').style.display='none';
+  document.getElementById('actPanel').style.display='none';
+  document.getElementById('cmdBar').style.display='none';
+  // Развернуть панель подключения
+  const b=document.getElementById('connBody');
+  if(b.classList.contains('collapsed')) toggleConn();
+  updateLast('exit','✅ Отключено',null);
+}
+
+function setStatus(s){
+  const d=document.getElementById('dot'),tx=document.getElementById('statusTxt');
+  d.className='dot';
+  if(s==='on'){d.classList.add('on');tx.textContent=st.host;}
+  else if(s==='err'){d.classList.add('err');tx.textContent='Ошибка';}
+  else if(s==='disconnected'){tx.textContent='Не подключено';}
+  else tx.textContent='Подключение…';
+}
+</script>
+</body>
+</html>
